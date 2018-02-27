@@ -1,14 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}
-        {% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html dir="ltr" lang="en-US">
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+
+    <!-- Stylesheets
+    ============================================= -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/swiper.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/dark.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/font-icons') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup') }}" type="text/css" />
+
+    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Document Title
+    ============================================= -->
+    {% block title %}<title>Home - Corporate Layout 2 | Canvas</title>{% endblock %}
+    {% block stylesheets %}{% endblock %}
+
+</head>
+
+<body class="stretched">
+
+{% block body %}
+
+
+
+{% endblock %}
+
+<!-- External JavaScripts
+============================================= -->
+<script src="{{ asset('js/jquery.js') }}"></script>
+<script src="{{ asset('js/plugins.js') }}"></script>
+
+<!-- Footer Scripts
+============================================= -->
+<script src="{{ asset('js/functions.js') }}"></script>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
