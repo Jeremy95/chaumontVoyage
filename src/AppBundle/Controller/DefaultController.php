@@ -26,4 +26,13 @@ class DefaultController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/voyage", name="voyagepage")
+     * @Template()
+     */
+    public function voyageAction(Request $request)
+    {
+        return [];
+    }
 }
