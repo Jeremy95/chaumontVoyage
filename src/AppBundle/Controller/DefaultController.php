@@ -17,4 +17,13 @@ class DefaultController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/contact", name="homepage")
+     * @Template()
+     */
+    public function contactAction(Request $request)
+    {
+        return [];
+    }
 }
