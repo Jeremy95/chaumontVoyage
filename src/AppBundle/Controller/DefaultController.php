@@ -19,7 +19,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/contact", name="homepage")
+     * @Route("/contact", name="contactpage")
      * @Template()
      */
     public function contactAction(Request $request)
