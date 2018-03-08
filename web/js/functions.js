@@ -1159,7 +1159,7 @@ var SEMICOLON = SEMICOLON || {};
 					}
 				}
 			} else {
-				SEMICOLON.header.removeStickyness();
+				//SEMICOLON.header.removeStickyness();
 			}
 		},
 

@@ -32,7 +32,7 @@
 
     <!-- Header
     ============================================= -->
-    <header id="header">
+    <header id="header" class="sticky-header">
 
         <div id="header-wrap">
 
@@ -52,7 +52,7 @@
                 <nav id="primary-menu" class="sub-title">
 
                     <ul>
-                        <li class="current"><a href="{{ path('homepage') }}"><div>Accueil</div>{#<span>Lets Start</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'homepage' %}class="current"{% endif %}><a href="{{ path('homepage') }}"><div>ACCUEIL</div>{#<span>Lets Start</span>#}</a>
                             {#<ul>
                                 <li><a href="index-corporate.html"><div>Home - Corporate</div></a>
                                     <ul>
@@ -121,7 +121,7 @@
                                 <li><a href="index-boxed.html"><div>Home - Boxed Layout</div></a></li>
                             </ul>#}
                         </li>
-                        <li><a href="#"><div>Autocars TTI</div>{#<span>Out of the Box</span>#}</a>
+                        <li><a href="#"><div>AUTOCARS TTI</div>{#<span>Out of the Box</span>#}</a>
                             <ul>
                                 <li><a href="#"><div><i class="icon-stack"></i>Notre flotte</div></a>
                                     {#<ul>
@@ -336,7 +336,7 @@
                                 <li><a href="profile.html"><div><i class="icon-user"></i>User Profile</div></a></li>#}
                             </ul>
                         </li>
-                        <li><a href="#"><div>Voyages</div>{#<span>Out of the Box</span>#}</a>
+                        <li><a href="#"><div>VOYAGES</div>{#<span>Out of the Box</span>#}</a>
                             <ul>
                                 <li><a href="#"><div><i class="icon-stack"></i>Billeterie entreprises</div></a>
                                 </li>
@@ -402,7 +402,7 @@
                                 </ul>
                             </div>#}
                         </li>
-                        <li {#class="mega-menu"#}><a href="#"><div>Congres</div>{#<span>Awesome Works</span>#}</a>
+                        <li {#class="mega-menu"#}><a href="#"><div>CONGRES</div>{#<span>Awesome Works</span>#}</a>
                             {#<div class="mega-menu-content style-2 clearfix">
                                 <ul class="mega-menu-column col-5">
                                     <li class="mega-menu-title"><a href="#"><div>Grids</div></a>
@@ -466,7 +466,7 @@
                                 </ul>
                             </div>#}
                         </li>
-                        <li {#class="mega-menu"#}><a href="#"><div>Reference</div>{#<span>Latest News</span>#}</a>
+                        <li {#class="mega-menu"#}><a href="#"><div>REFERENCE</div>{#<span>Latest News</span>#}</a>
                             {#<div class="mega-menu-content style-2 clearfix">
                                 <ul class="mega-menu-column col-lg-3">
                                     <li class="mega-menu-title"><a href="#"><div>Default</div></a>
@@ -538,7 +538,7 @@
                                 </ul>
                             </div>#}
                         </li>
-                        <li><a href="shop.html"><div>Temoignages</div>{#<span>Buy Now</span>#}</a>
+                        <li><a href="shop.html"><div>TEMOIGNAGES</div>{#<span>Buy Now</span>#}</a>
                             {#<ul>
                                 <li><a href="shop.html"><div>4 Columns</div></a></li>
                                 <li><a href="shop-3.html"><div>3 Columns</div></a>
@@ -636,7 +636,7 @@
                                 </ul>
                             </div>
                         </li>#}
-                        <li><a href="{{ path('contactpage') }}"><div>Contact</div>{#<span>Buy Now</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'contactpage' %} class="current"{% endif %}><a href="{{ path('contactpage') }}"><div>CONTACT</div>{#<span>Buy Now</span>#}</a>
                     </ul>
 
                     {#<!-- Top Cart
