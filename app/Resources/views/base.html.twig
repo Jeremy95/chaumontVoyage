@@ -121,9 +121,9 @@
                                 <li><a href="index-boxed.html"><div>Home - Boxed Layout</div></a></li>
                             </ul>#}
                         </li>
-                        <li><a href="#"><div>AUTOCARS TTI</div>{#<span>Out of the Box</span>#}</a>
+                        {#<li><a href="#"><div>AUTO</div>{#<span>Out of the Box</span></a>
                             <ul>
-                                <li><a href="#"><div><i class="icon-stack"></i>Notre flotte</div></a>
+                                {#<li><a href="#"><div><i class="icon-stack"></i>Notre flotte</div></a>
                                     {#<ul>
                                         <li><a href="slider-revolution.html"><div>Revolution Slider</div></a>
                                             <ul>
@@ -168,7 +168,7 @@
                                                 <li><a href="static-embed-video.html"><div>Static - Embedded Video</div></a></li>
                                             </ul>
                                         </li>
-                                    </ul>#}
+                                    </ul>
                                 </li>
                                 <li><a href="widgets.html"><div><i class="icon-gift"></i>Couchettes et remorques</div></a>
                                     {#<ul>
@@ -187,7 +187,7 @@
                                         <li><a href="widgets.html"><div>Tags Cloud</div></a></li>
                                         <li><a href="widgets.html"><div>Video Embeds</div></a></li>
                                         <li><a href="widgets.html"><div>Raw Text/HTML</div></a></li>
-                                    </ul>#}
+                                    </ul>
                                 </li>
                                 <li><a href="#"><div><i class="icon-umbrella"></i>Sécurité</div></a>
                                     {#<ul>
@@ -219,8 +219,8 @@
                                         <li><a href="responsive-sticky.html"><div>Responsive Sticky</div></a></li>
                                         <li><a href="logo-changer.html"><div>Alternate Logos</div></a></li>
                                         <li><a href="alternate-mobile-menu.html"><div>Alternate Mobile Menu</div></a></li>
-                                    </ul>#}
-                                </li>
+                                    </ul>
+                                </li>#}
                                 {#<li><a href="side-panel.html"><div><i class="icon-line-layout"></i>Side Panel</div></a>
                                     <ul>
                                         <li><a href="side-panel-left-overlay.html"><div>Left Overlay</div></a></li>
@@ -333,11 +333,11 @@
                                         <li><a href="coming-soon-3.html"><div>HTML5 Video</div></a></li>
                                     </ul>
                                 </li>
-                                <li><a href="profile.html"><div><i class="icon-user"></i>User Profile</div></a></li>#}
+                                <li><a href="profile.html"><div><i class="icon-user"></i>User Profile</div></a></li>
                             </ul>
-                        </li>
+                        </li>#}
 
-                        <li {% if app.request.attributes.get('_route') == 'voyagepage' %} class="current"{% endif %}><a href="{{ path('voyagepage') }}"><div>VOYAGES</div>{#<span>Out of the Box</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'entreprisepage' %} class="current"{% endif %}><a href="{{ path('entreprisepage') }}"><div>ENTREPRISE</div>{#<span>Out of the Box</span>#}</a>
                             <ul>
                                 <li><a href="#"><div><i class="icon-stack"></i>Billeterie entreprises</div></a>
                                 </li>
@@ -403,7 +403,7 @@
                                 </ul>
                             </div>#}
                         </>
-                        <li {#class="mega-menu"#}><a href="#"><div>CONGRES</div>{#<span>Awesome Works</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'particulierspage' %} class="current"{% endif %}{#class="mega-menu"#}><a href="{{ path('particulierspage') }}"><div>PARTICULIERS</div>{#<span>Awesome Works</span>#}</a>
                             {#<div class="mega-menu-content style-2 clearfix">
                                 <ul class="mega-menu-column col-5">
                                     <li class="mega-menu-title"><a href="#"><div>Grids</div></a>
@@ -467,7 +467,7 @@
                                 </ul>
                             </div>#}
                         </li>
-                        <li {#class="mega-menu"#}><a href="#"><div>REFERENCE</div>{#<span>Latest News</span>#}</a>
+                       {# <li {#class="mega-menu"}><a href="#"><div>REFERENCE</div>{#<span>Latest News</span>}</a>
                             {#<div class="mega-menu-content style-2 clearfix">
                                 <ul class="mega-menu-column col-lg-3">
                                     <li class="mega-menu-title"><a href="#"><div>Default</div></a>
@@ -537,9 +537,9 @@
                                         </ul>
                                     </li>
                                 </ul>
-                            </div>#}
-                        </li>
-                        <li><a href="shop.html"><div>TEMOIGNAGES</div>{#<span>Buy Now</span>#}</a>
+                            </div>
+                        </li>#}
+                        {#<li><a href="shop.html"><div>TEMOIGNAGES</div>{#<span>Buy Now</span>}</a>
                             {#<ul>
                                 <li><a href="shop.html"><div>4 Columns</div></a></li>
                                 <li><a href="shop-3.html"><div>3 Columns</div></a>
@@ -576,8 +576,8 @@
                                 </li>
                                 <li><a href="cart.html"><div>Cart</div></a></li>
                                 <li><a href="checkout.html"><div>Checkout</div></a></li>
-                            </ul>#}
-                        </li>
+                            </ul>
+                        </li>#}
                         {#<li class="mega-menu"><a href="#"><div>Shortcodes</div><span>Amazing Elements</span></a>
                             <div class="mega-menu-content clearfix">
                                 <ul class="mega-menu-column col-5">

@@ -28,10 +28,19 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/voyage", name="voyagepage")
+     * @Route("/entreprise", name="entreprisepage")
      * @Template()
      */
-    public function voyageAction(Request $request)
+    public function entrepriseAction(Request $request)
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/particuliers", name="particulierspage")
+     * @Template()
+     */
+    public function particuliersAction(Request $request)
     {
         return [];
     }
