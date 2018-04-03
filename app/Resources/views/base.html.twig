@@ -337,7 +337,7 @@
                             </ul>
                         </li>#}
 
-                        <li {% if app.request.attributes.get('_route') == 'entreprisepage' %} class="current"{% endif %}><a href="{{ path('entreprisepage') }}"><div>ENTREPRISE</div>{#<span>Out of the Box</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'chaumontvoyagepage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagepage') }}"><div>NOTRE AGENCE</div>{#<span>Out of the Box</span>#}</a>
                            {# <ul>
                                 <li><a href="#"><div><i class="icon-stack"></i>Billeterie entreprises</div></a>
                                 </li>
@@ -403,7 +403,7 @@
                                 </ul>
                             </div>#}
                         </>
-                        <li {% if app.request.attributes.get('_route') == 'particulierspage' %} class="current"{% endif %}{#class="mega-menu"#}><a href="{{ path('particulierspage') }}"><div>PARTICULIERS</div>{#<span>Awesome Works</span>#}</a>
+                        <li {% if app.request.attributes.get('_route') == 'autocarsttipage' %} class="current"{% endif %}{#class="mega-menu"#}><a href="{{ path('autocarsttipage') }}"><div>AUTOCARS TTI</div>{#<span>Awesome Works</span>#}</a>
                             {#<div class="mega-menu-content style-2 clearfix">
                                 <ul class="mega-menu-column col-5">
                                     <li class="mega-menu-title"><a href="#"><div>Grids</div></a>
@@ -741,8 +741,8 @@
 
                             <ul>
                                 <li {% if app.request.attributes.get('_route') == 'homepage' %} class="current"{% endif %}><a href="{{ path('homepage') }}">Accueil</a></li>
-                                <li {% if app.request.attributes.get('_route') == 'entreprisepage' %} class="current"{% endif %}><a href="{{ path('entreprisepage') }}">Entreprise</a></li>
-                                <li {% if app.request.attributes.get('_route') == 'particulierspage' %} class="current"{% endif %}><a href="{{ path('particulierspage') }}">Particuliers</a></li>
+                                <li {% if app.request.attributes.get('_route') == 'chaumontvoyagepage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagepage') }}">Notre Agence</a></li>
+                                <li {% if app.request.attributes.get('_route') == 'autocarsttipage' %} class="current"{% endif %}><a href="{{ path('autocarsttipage') }}">Autocars TTI</a></li>
                                 <li {% if app.request.attributes.get('_route') == 'contactpage' %} class="current"{% endif %}><a href="{{ path('contactpage') }}">Contact</a></li>
                             </ul>
 

@@ -28,19 +28,19 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/entreprise", name="entreprisepage")
+     * @Route("/notre-agence", name="chaumontvoyagepage")
      * @Template()
      */
-    public function entrepriseAction(Request $request)
+    public function chaumontVoyageAction(Request $request)
     {
         return [];
     }
 
     /**
-     * @Route("/particuliers", name="particulierspage")
+     * @Route("/autocars-tti", name="autocarsttipage")
      * @Template()
      */
-    public function particuliersAction(Request $request)
+    public function autocarsTTIAction(Request $request)
     {
         return [];
     }
