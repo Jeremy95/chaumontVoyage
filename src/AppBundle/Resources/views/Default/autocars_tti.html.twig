@@ -1,5 +1,161 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <section id="slider" class="slider-element boxed-slider">
 
+        <div class="container clearfix">
+
+            <div class="fslider" data-animation="fade" data-thumbs="true" data-arrows="false" data-speed="1200" data-pause="7000">
+                <div class="flexslider">
+                    <div class="slider-wrap">
+                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/2.jpg') }}">
+                            <a href="#">
+                                <img src="{{ asset('images/slider/boxed/2.jpg') }}" alt="Slide 2">
+                                <div class="flex-caption slider-caption-bg">Responsive Ready Design</div>
+                            </a>
+                        </div>
+                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/3.jpg') }}">
+                            <a href="#">
+                                <img src="{{ asset('images/slider/boxed/3.jpg') }}" alt="Slide 3">
+                                <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-top-left">Retina Graphics Display</div>
+                            </a>
+                        </div>
+                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/4.jpg') }}">
+                            <a href="#">
+                                <img src="{{ asset('images/slider/boxed/4.jpg') }}" alt="Slide 4">
+                                <div class="flex-caption slider-caption-bg slider-caption-top-right">Bootstrap 3+ Compatible</div>
+                            </a>
+                        </div>
+                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/5.jpg') }}">
+                            <a href="#">
+                                <img src="{{ asset('images/slider/boxed/5.jpg') }}" alt="Slide 5">
+                                <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-bottom-right">eCommerce Design Included</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="content" style="background-color: #F9F9F9">
+
+        <div class="content-wrap">
+
+            <div class="container clearfix">
+
+                <div class="heading-block center">
+                    <h2>Nos services</h2>
+                </div>
+
+                <div class="col_one_third nobottommargin">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img src="{{ asset('images/services/1.jpg') }}" alt="Why choose Us?">
+                        </div>
+                        <div class="fbox-desc">
+                            <h3>Flotte d'autocars.<span class="subtitle">Because we are Reliable.</span></h3>
+                            <p>Nous mettons à votre disposition des autocars de 22 à 83 places.
+                                Tous équipés de vidéo, air conditionné,  réfrigérateur, sièges inclinables, et toilettes (à partir de 33 places).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col_one_third nobottommargin">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img src="{{ asset('images/services/2.jpg') }}" alt="Why choose Us?">
+                        </div>
+                        <div class="fbox-desc">
+                            <h3>Couchettes & remorques<span class="subtitle">To Redefine your Brand.</span></h3>
+                            <p>Des cars couchettes de 40 à 50 places pour que vos week-ends soient plus confortables.
+                                Pour transporter votre matériel ou bagages de tous types, des remorques de 9 à 24 <m3></m3>.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col_one_third nobottommargin col_last">
+                    <div class="feature-box media-box">
+                        <div class="fbox-media">
+                            <img src="{{ asset('images/services/3.jpg') }}" alt="Why choose Us?">
+                        </div>
+                        <div class="fbox-desc">
+                            <h3>Sécurité et sureté.<span class="subtitle">Make our Customers Happy.</span></h3>
+                            <p>Pour notre société il s'agit d'un enjeu majeur : le respect de la réglementation en vigueur est donc indispensable. La sécurité, un engagement que nous respectons.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="clear"></div><div class="line"></div>
+
+            <div class="container clearfix">
+
+                <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
+                    <canvas id="chart-doughnut"></canvas>
+                </div>
+
+                <div class="col_three_fifth nobottommargin col_last">
+
+                    <div class="heading-block">
+                        <h3>Notre flotte d'autocars.</h3>
+                        <span>A votre disposition des autocars de Grand Tourisme, de moins de 10 ans, pour tous vos déplacements.</span>
+                    </div>
+
+                    <section id="slider" class="slider-element boxed-slider">
+
+                        <div class="container clearfix">
+
+                            <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="0" data-items="1" data-animate-in="zoomIn" data-speed="450" data-animate-out="fadeOut">
+
+                                <a href="#"><img src="{{ asset('images/slider/boxed/2.jpg') }}" alt="Slider"></a>
+                                <a href="#"><img src="{{ asset('images/slider/boxed/3.jpg') }}" alt="Slider"></a>
+                                <a href="#"><img src="{{ asset('images/slider/boxed/4.jpg') }}" alt="Slider"></a>
+                                <a href="#"><img src="{{ asset('images/slider/boxed/5.jpg') }}" alt="Slider"></a>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <div class="clear"></div><div class="line"></div>
+
+                <div class="col_three_fifth">
+
+                    <div class="heading-block">
+                        <h3>Sécurité</h3>
+                        <span>Benchmarking your website's performance helps you make great choices for your business.</span>
+                    </div>
+
+                    <p>La sécurité représente la préocupation majeure de notre activité au quotidien, outre que notre matériel soit de dernière génération, nous apportons une attention constante à son parfait entretien afin de conserver le niveau de disponibilité optimale, dans le but de vous satisfaire pleinement. Ainsi, pour notre société, la sécurité n' est pas seulement un mot, mais un réel enjeux que nous nous efforçons de maintenir au plus haut niveau</p>
+
+                    <div class="col_four_fifth">
+                        <ul>
+                            <li>Autocars de moins de 10 ans</li>
+                            <li>Respect absolu des amplitudes et des temps de conduites</li>
+                            <li>Mise en place de relais conducteurs ou double équipage lors des longs parcours</li>
+                            <li>Passage au service de vérifications des Mines tous les 6 mois</li>
+                            <li>Atelier et techniciens qualifiés au sein de notre dépôt pour les opérations de maintenance</li>
+                            <li>Un réseau de constructeurs et réparateurs réactifs sur toute l'Europe</li>
+                            <li>Nos véhicules les plus récents sont équipés d'Ethylotest</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="col_two_fifth topmargin col_last" style="min-height: 350px">
+                    <canvas id="chart-radar"></canvas>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section><!-- #content end -->
 {% endblock %}
