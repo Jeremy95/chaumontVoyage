@@ -10747,7 +10747,13 @@ blockquote.float-right {
 	Overlays
 -----------------------------------------------------------------*/
 
-
+.overlay .slider-overlay-wrap {
+	opacity: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+}	
 .overlay {
 	position: absolute;
 	top: 0;

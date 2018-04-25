@@ -4,101 +4,99 @@
 
     <section id="slider" class="slider-element slider-parallax" style="background-color: #222;">
 
-        <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="0" data-items="1" data-pagi="false" data-loop="true" data-animate-in="rollIn" data-speed="450" data-animate-out="rollOut" data-autoplay="5000">
+        <div class="container-fluid vertical-middle center clearfix">
+            <!--            <i class="i-plain i-large icon-line-video divcenter" data-animate="fadeInDown"></i>       -->
+            <div class="emphasis-title nomargin" data-animate="fadeInUp">
+                <h2 style="font-size: 56px; color: white;">Nos agences de voyages sont à votre disposition pour toutes vos demandes individuelles</h2>
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="oc-slider" class="owl-carousel carousel-widget " data-margin="0" data-items="1" data-pagi="false" data-loop="true" data-animate-in="rollIn" data-speed="450" data-animate-out="rollOut" data-autoplay="5000">
 
             <a href="#"><img src={{ asset('images/slider/full/1.jpg') }} alt="Slider"></a>
             <a href="#"><img src={{ asset('images/slider/full/2.jpg') }} alt="Slider"></a>
             <a href="#"><img src={{ asset('images/slider/full/3.jpg') }} alt="Slider"></a>
             <a href="#"><img src={{ asset('images/slider/full/4.jpg') }} alt="Slider"></a>
 
-            <div class="owl-nav">
-                <button role="presentation" class="owl-prev">
-                    <i class="icon-angle-left"></i>
-                </button>
-                <button role="presentation" class="owl-next">
-                    <i class="icon-angle-right"></i>
-                </button>
-            </div>
+<!--    <div class="owl-nav">
+           <button role="presentation" class="owl-prev">
+               <i class="icon-angle-left"></i>
+           </button>
+           <button role="presentation" class="owl-next">
+               <i class="icon-angle-right"></i>
+           </button>
+        </div> -->
+
         </div>
-
-        <div class="content-wrap nopadding">
-
-            <div class="section notopborder nomargin">
-
-                <div class="container clearfix">
-
-                    <div class="col_two_fifth topmargin-sm nobottommargin" style="min-height: 350px">
-                        <canvas id="chart-radar"></canvas>
-                    </div>
-
-                    <div class="col_three_fifth nobottommargin col_last">
-
-                        <div class="heading-block">
-                            <h2>Nos agences de Gennevilliers et Mantes la Jolie sont à votre disposition pour toutes vos demandes individuelles</h2>
-                            <span>Show off Different Elements with a Different Touch.</span>
-                            <div class="clear"></div>
-                        </div>
-
-                        <div class="col_half bottommargin" data-animate="bounceIn">
-                            <h5>Chaumont voyages genevilliers</h5>
-                        </div>
-
-                        <div class="col_half col_last bottommargin" data-animate="bounceIn">
-                            <h5>Chaumont voyages Mantes la Jolie</h5>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
-        <div class="section dark nomargin noborder" style="height: 550px;">
-            <div class="container-fluid vertical-middle center clearfix">
-                <i class="i-plain i-large icon-line-video divcenter" data-animate="fadeInDown"></i>
-                <div class="emphasis-title nomargin" data-animate="fadeInUp">
-                    <h2 style="font-size: 56px;">Nous vous accompagnons au bout de vos rêves</h2>
-                </div>
-            </div>
-            <div class="video-wrap">
-                <video poster= {{ asset('images/videos/explore.jpg')}} preload="auto" loop autoplay muted>
-                    <source src={{ asset('images/videos/explore.webm')}} type='video/webm' />
-                    <source src={{ asset('images/videos/explore.mp4')}} type='video/mp4' />
-                </video>
-                <div class="video-overlay"></div>
-            </div>
-        </div>
-
-        <div class="section nomargin noborder bgcolor dark" style="padding: 80px 0;">
-            <div class="container center clearfix">
-
-                <div class="heading-block">
-                    <h2>Section with a Flat Background Color</h2>
-                    <span>We don't just talk about possibilities. We make them Possible.</span>
-                </div>
-
-                <div class="col_one_fourth topmargin-sm nobottommargin">
-                    <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="90" data-width="4" data-animate="3000">90%</div>
-                </div>
-
-                <div class="col_one_fourth topmargin-sm nobottommargin">
-                    <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="75" data-width="4" data-animate="4000">75%</div>
-                </div>
-
-                <div class="col_one_fourth topmargin-sm nobottommargin">
-                    <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="80" data-width="4" data-animate="2000">80%</div>
-                </div>
-
-                <div class="col_one_fourth topmargin-sm nobottommargin col_last">
-                    <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="60" data-width="4" data-animate="2000">60%</div>
-                </div>
-
-            </div>
-        </div>
-
 
     </section>
+
+    <div class="content-wrap nopadding">
+
+       <div class="section notopborder nomargin">
+
+           <div class="divecenter center cleanobottommargin col_last">
+
+               <div class="col_half bottommargin" data-animate="bounceIn">
+                   <h5>Chaumont voyages genevilliers</h5>
+                   <span>9 Route Principale du Port <br>92230 Gennevilliers <br>TEL : +33 1 47 98 22 40</span>
+               </div>
+
+               <div class="col_half col_last bottommargin" data-animate="bounceIn">
+                   <h5>Chaumont voyages Mantes la Jolie</h5>
+                   <span>Centre Commercial 2 Val Fourré <br>78200 MANTES LA JOLIE <br>TEL : +33 1 30 63 07 00</span>
+               </div>
+
+           </div>
+
+        </div>
+
+    </div>
+
+    <div class="section dark nomargin noborder" style="height: 550px;">
+        <div class="container-fluid vertical-middle center clearfix">
+           <!--            <i class="i-plain i-large icon-line-video divcenter" data-animate="fadeInDown"></i>       -->
+            <div class="emphasis-title nomargin" data-animate="fadeInUp">
+                <h2 style="font-size: 56px;">Faites de vos rêves une réalité</h2>
+            </div>
+        </div>
+        <div class="video-wrap">
+            <video poster= {{ asset('images/videos/explore.jpg')}} preload="auto" loop autoplay muted>
+                <source src={{ asset('images/videos/explore.webm')}} type='video/webm' />
+                <source src={{ asset('images/videos/explore.mp4')}} type='video/mp4' />
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+    </div>
+
+    <div class="section nomargin noborder bgcolor dark" style="padding: 80px 0;">
+        <div class="container center clearfix">
+
+            <div class="heading-block">
+                <h2>Section with a Flat Background Color</h2>
+                <span>We don't just talk about possibilities. We make them Possible.</span>
+            </div>
+
+            <div class="col_one_fourth topmargin-sm nobottommargin">
+                <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="90" data-width="4" data-animate="3000">90%</div>
+            </div>
+
+            <div class="col_one_fourth topmargin-sm nobottommargin">
+                <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="75" data-width="4" data-animate="4000">75%</div>
+            </div>
+
+            <div class="col_one_fourth topmargin-sm nobottommargin">
+                <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="80" data-width="4" data-animate="2000">80%</div>
+            </div>
+
+            <div class="col_one_fourth topmargin-sm nobottommargin col_last">
+                <div class="rounded-skill nobottommargin" data-color="#FFF" data-size="150" data-percent="60" data-width="4" data-animate="2000">60%</div>
+            </div>
+
+        </div>
+    </div>
+
 
 
 {% endblock %}
