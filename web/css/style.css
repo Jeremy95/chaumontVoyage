@@ -406,7 +406,7 @@ span.middot {
 }
 
 .bgcolor,
-.bgcolor #header-wrap { background-color: #1ABC9C !important; }
+.bgcolor #header-wrap { background-color: #A649BF !important; }
 
 .color { color: #1ABC9C !important; }
 
@@ -608,7 +608,7 @@ span.middot {
 
 .col_full { width: 100%; }
 .col_half,
-.postcontent.bothsidebar { width: 48%; }
+.postcontent.bothsidebar { width: 49%; }
 .col_one_third { width: 30.63%; }
 .col_two_third { width: 65.33%; }
 .col_one_fourth,
@@ -10499,6 +10499,7 @@ blockquote.float-right {
 	position:relative;
 	overflow:hidden;
 	-webkit-transform:translate3d(0,0,0);
+	opacity:0.5;
 }
 
 .owl-carousel.owl-loaded { display:block }
@@ -10747,13 +10748,6 @@ blockquote.float-right {
 	Overlays
 -----------------------------------------------------------------*/
 
-.overlay .slider-overlay-wrap {
-	opacity: 0;
-	position: relative;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0,0,0,0.6);
-}	
 .overlay {
 	position: absolute;
 	top: 0;

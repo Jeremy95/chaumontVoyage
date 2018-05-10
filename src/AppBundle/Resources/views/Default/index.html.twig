@@ -23,33 +23,20 @@
 
         <!-- Content
         ============================================= -->
-    <section id="slider" class="slider-element force-full-screen full-screen">
+    <section id="content">
 
-        <div class="force-full-screen full-screen dark" style="background-image: url({{ asset('images/19-mercedes.jpg') }}); background-position: right 45% bottom 60%;;">
-            <div class="container clearfix" style="padding-top: 15%;">
-
-                <div class="row clear-bottommargin">
-
-                    <div class="col-lg-6 col-md-6 bottommargin">
-                        <div class="promo promo-dark promo-mini promo-center">
-                            <h3 style="line-height: 5em;"> <span style="font-weight:  bold; font-size: 50px;">Chaumont Voyage</span> </h3>
-                            <a href="{{ path('chaumontvoyagepage') }}" class="button button-large button-rounded">Découvrir</a>
-                        </div>
-                    </div>
-
-                    <div class="w-100 d-none d-md-block d-lg-none"></div>
-
-                    <div class="col-lg-6 col-md-6 bottommargin">
-                        <div class="promo promo-dark promo-mini promo-center">
-                            <h3 style="line-height: 5em;"> <span style="font-weight:  bold; font-size: 50px;">Autocars TTI</span></h3>
-                            <a href="{{ path('autocarsttipage') }}" class="button button-large button-rounded">Découvrir</a>
-                        </div>
-                    </div>
-
-                </div>
-
+        <div class="col_half" style="margin-bottom: 0px; margin-right: 1px;">
+            <div class="promo promo-dark promo-mini promo-center " style="background: no-repeat; background-image: url({{ asset('images/slider/boxed/4.jpg') }});background-position:right 45% bottom 60%; padding: 25% 0%;">
+                <h3 style="line-height: 5em;"> <span style="font-weight:  bold; font-size: 50px;">Chaumont Voyage</span> </h3>
+                <a href="{{ path('chaumontvoyagepage') }}" class="button button-large button-rounded">Découvrir</a>
             </div>
+        </div>
 
+        <div class="col_half col_last" style="float: right;margin-bottom: 0px;">
+            <div class="promo promo-dark promo-mini promo-center" style="background-image: url({{ asset('images/cars.jpg') }});background-position:right 45% bottom 60%; padding: 25% 0%;">
+                <h3 style="line-height: 5em;"> <span style="font-weight:  bold; font-size: 50px;">Autocars TTI</span></h3>
+                <a href="{{ path('autocarsttipage') }}" class="button button-large button-rounded">Découvrir</a>
+            </div>
         </div>
 
     </section>
@@ -58,13 +45,9 @@
 
                 <div class="section notopborder nomargin">
 
-                    <div class="container clearfix" style="margin-bottom: 2rem">
+                    <div class="container clearfix" style="margin-bottom: 1rem; text-align: center;">
 
-                        <div class="col_two_fifth topmargin-sm nobottommargin" style="min-height: 350px">
-
-                        </div>
-
-                        <div class="col_three_fifth nobottommargin col_last">
+                        <div class="col_full nobottommargin col_last">
 
                             <div class="heading-block topmargin-sm">
                                 <h2>GROUPE CHAUMONT </h2>
@@ -77,11 +60,50 @@
                             <a href="#" class="button button-3d button-large">Découvrir</a>
 
                         </div>
+                        <div class="section notopborder nomargin">
+
+                            <div class="container clearfix" style="margin-bottom: 2rem">
+
+                                <div class="col_half nobottommargin col_last">
+
+                                    <div class="heading-block topmargin-sm">
+                                        <h2>AUTOCARS T.T.I</h2>
+                                    </div>
+
+                                    <p>Location d'autocars de grand tourisme : pour tout vos déplacements en France ou à l'étranger <br>
+
+                                        De 22 à 83 places avec tout le confort <br>
+                                        Possibilité couchettes et/ou remorques <br>
+                                        Flotte renouvelée en permanence <br>
+                                        Permanence téléphonique 24H/24 7J/7</p>
+
+                                    <a href="#" class="button button-3d button-large">Découvrir</a>
+
+                                </div>
+
+                                <div class="col_half col_last nobottommargin col_last" style="float: right">
+
+                                    <div class="heading-block topmargin-sm">
+                                        <h2>CHAUMONT VOYAGES </h2>
+                                    </div>
+
+                                    <p>Tourisme et voyages d'affaires : Congrès, Séminaires et tout autre événement <br>
+
+                                        Accompagnement sur toutes les destinations <br>
+                                        Emission de tout type de billets <br>
+                                        Organisation : Inscriptions, logistique, réservations .. <br>
+                                        Promotion de l'événement </p>
+
+                                    <a href="#" class="button button-3d button-large">Découvrir</a>
+
+                                </div>
+                            </div>
+
+                        </div>
 
                     </div>
 
                 </div>
-
 
                 {#<div class="container clearfix">
 
@@ -306,8 +328,51 @@
 
                 </div>
 
+            </div> <!-- #content end -->#}
+    </section>
+
+    <section id="content ">
+        <div class="fslider testimonial testimonial-full bottommargin" data-animation="fade" data-arrows="false">
+            <div class="flexslider">
+                <div class="slider-wrap">
+                    <div class="slide">
+                        <div class="testi-image">
+                            <a href="#"><img src="{{ asset('images/meyer-fitoussi-SOP.jpg') }}" alt="Customer Testimonails"></a>
+                        </div>
+                        <div class="testi-content">
+                            <p>Meyer Fitoussi, président de la SOP - Chevalier de la Légion d’Honneur : Depuis 1979 la SOP a toujours confié ses voyages congrès à CHAUMONT VOYAGES </p>
+                            <div class="testi-meta">
+                                Meyer Fitoussi
+                                <span>SOP</span>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="slide">
+                        <div class="testi-image">
+                            <a href="#"><img src="{{ asset('images/B.Bardin-AREC.jpg') }}" alt="Customer Testimonails"></a>
+                        </div>
+                        <div class="testi-content">
+                            <p>En tant que responsable des voyages de l'amicale de retraités AREC de fin 1997 à octobre 2005, j'ai organisé, avec Chaumont Voyages, en moyenne trois voyages par an ( certains comprenant plusieurs groupes ) en France métropolitaine, dans les DOM et à l'étranger : Europe, Moyen Orient, Océan Indien, Afrique du Nord et de l'Est … etc Les participants ont toujours été très satisfaits de ces voyages se présentant souvent sous forme de circuits spécialement étudiés pour nous . Quant à moi je n'ai eu qu'à me féliciter des services rendus grâce au professionnalisme, au dévouement et à la disponibilité des responsables de Chaumont Voyages et à la qualité de ses réceptifs locaux. C’est pourquoi je continue à utiliser leurs services à titre personnel avec un groupe d’amis afin d’effectuer au moins un voyage par an.</p>
+                            <div class="testi-meta">
+                                Bernard Bardin
+                                <span>AREC</span>
+                            </div>
+                        </div>
+                    </div>
+                    {#   <div class="slide">
+                         <div class="testi-image">
+                             <a href="#"><img src="images/testimonials/1.jpg" alt="Customer Testimonails"></a>
+                         </div>
+                         <div class="testi-content">
+                             <p>Incidunt deleniti blanditiis quas aperiam recusandae consequatur ullam quibusdam cum libero illo rerum!</p>
+                             <div class="testi-meta">
+                                 John Doe
+                                 <span>XYZ Inc.</span>
+                             </div>
+                         </div>
+                     </div> #}
+                </div>
             </div>
-
-    </section><!-- #content end -->#}
-
+        </div>
+    </section>
 {% endblock %}
