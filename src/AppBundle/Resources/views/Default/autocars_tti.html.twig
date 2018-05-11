@@ -8,27 +8,27 @@
             <div class="fslider" data-animation="fade" data-thumbs="true" data-arrows="false" data-speed="1200" data-pause="7000">
                 <div class="flexslider">
                     <div class="slider-wrap">
-                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/2.jpg') }}">
+                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/19-mercedes.jpg') }}">
                             <a href="#">
-                                <img src="{{ asset('images/slider/boxed/2.jpg') }}" alt="Slide 2">
+                                <img src="{{ asset('images/slider/autocars/20160104_164212.jpg') }}" alt="Slide 4">
+                                <div class="flex-caption slider-caption-bg slider-caption-top-right">Des autocars tout confort un voyage agréable</div>
+                            </a>
+                        </div>
+                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/inside-thumb.jpg') }}">
+                            <a href="#">
+                                {#<img src="{{ asset('images/slider/autocars/inside.jpeg') }}" alt="Slide 2">#}
                                 <div class="flex-caption slider-caption-bg">Responsive Ready Design</div>
                             </a>
                         </div>
-                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/3.jpg') }}">
+                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/outside-thumb.jpg') }}">
                             <a href="#">
-                                <img src="{{ asset('images/slider/boxed/3.jpg') }}" alt="Slide 3">
+                                <img src="{{ asset('images/slider/autocars/20160104_164249.jpg') }}" alt="Slide 3">
                                 <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-top-left">Retina Graphics Display</div>
-                            </a>
-                        </div>
-                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/4.jpg') }}">
-                            <a href="#">
-                                <img src="{{ asset('images/slider/boxed/4.jpg') }}" alt="Slide 4">
-                                <div class="flex-caption slider-caption-bg slider-caption-top-right">Bootstrap 3+ Compatible</div>
                             </a>
                         </div>
                         <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/5.jpg') }}">
                             <a href="#">
-                                <img src="{{ asset('images/slider/boxed/5.jpg') }}" alt="Slide 5">
+                                <img src="{{ asset('images/slider/autocars/20160104_162936.jpg') }}" alt="Slide 5">
                                 <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-bottom-right">eCommerce Design Included</div>
                             </a>
                         </div>
@@ -90,41 +90,26 @@
 
             </div>
 
-            <div class="clear"></div><div class="line"></div>
+            <div class="clear"></div><div class="line" style="margin-bottom: 0px"></div>
+
+            <div class="section dark nomargin noborder" style="height: 550px;">
+                <div class="container-fluid vertical-middle center clearfix">
+                    <!--            <i class="i-plain i-large icon-line-video divcenter" data-animate="fadeInDown"></i>       -->
+                    <div class="emphasis-title nomargin" data-animate="fadeInUp">
+                        <h2 style="font-size: 56px;">Faites de vos rêves une réalité</h2>
+                    </div>
+                </div>
+                <div class="video-wrap">
+                    <video poster= {{ asset('images/videos/explore.jpg')}} preload="auto" loop autoplay muted>
+                        <source src="{{ asset('images/slider/autocars/videoplayback.webm') }}" type='video/mp4' />
+                    </video>
+                    <div class="video-overlay"></div>
+                </div>
+            </div>
 
             <div class="container clearfix">
 
-                <div class="col_two_fifth topmargin nobottommargin" style="min-height: 350px;">
-                    <canvas id="chart-doughnut"></canvas>
-                </div>
-
-                <div class="col_three_fifth nobottommargin col_last">
-
-                    <div class="heading-block">
-                        <h3>Notre flotte d'autocars.</h3>
-                        <span>A votre disposition des autocars de Grand Tourisme, de moins de 10 ans, pour tous vos déplacements.</span>
-                    </div>
-
-                    <section id="slider" class="slider-element boxed-slider">
-
-                        <div class="container clearfix">
-
-                            <div id="oc-slider" class="owl-carousel carousel-widget" data-margin="0" data-items="1" data-animate-in="zoomIn" data-speed="450" data-animate-out="fadeOut">
-
-                                <a href="#"><img src="{{ asset('images/slider/boxed/2.jpg') }}" alt="Slider"></a>
-                                <a href="#"><img src="{{ asset('images/slider/boxed/3.jpg') }}" alt="Slider"></a>
-                                <a href="#"><img src="{{ asset('images/slider/boxed/4.jpg') }}" alt="Slider"></a>
-                                <a href="#"><img src="{{ asset('images/slider/boxed/5.jpg') }}" alt="Slider"></a>
-
-                            </div>
-
-                        </div>
-
-                    </section>
-
-                </div>
-
-                <div class="clear"></div><div class="line"></div>
+                <div class="clear"></div><div class="line" style="margin-top: 0px"></div>
 
                 <div class="col_three_fifth">
 
@@ -154,6 +139,123 @@
                 </div>
 
             </div>
+
+            <section id="content" style="margin-bottom: 0px;">
+
+                <div class="content-wrap">
+
+                    <div class="container clearfix">
+
+                        <!-- Contact Form
+                        ============================================= -->
+                            <div class="fancy-title title-dotted-border text-center">
+                                <h3>Devis Transport</h3>
+                            </div>
+
+                                {{ form_start(form) }}
+                                <div class="form-group">
+                                    {{ form_label(form.title) }}
+                                    {{ form_widget(form.title) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.title) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.name) }}
+                                    {{ form_widget(form.name) }}
+
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.name) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.nickname) }}
+                                    {{ form_widget(form.nickname) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.nickname) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.phone) }}
+                                    {{ form_widget(form.phone) }}
+
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.phone) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.email) }}
+                                    {{ form_widget(form.email) }}
+
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.email) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.address) }}
+                                    {{ form_widget(form.address) }}
+
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.address) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.city) }}
+                                    {{ form_widget(form.city) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.city) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.society) }}
+                                    {{ form_widget(form.society) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.society) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.departDate) }}
+                                    {{ form_widget(form.departDate) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.departDate) }}</div>
+
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.departHour) }}
+                                    {{ form_widget(form.departHour) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.departHour) }}</div>
+
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.arrivedDate) }}
+                                    {{ form_widget(form.arrivedDate) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.arrivedDate) }}</div>
+
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.arrivedHour) }}
+                                    {{ form_widget(form.arrivedHour) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.arrivedHour) }}</div>
+
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.destination) }}
+                                    {{ form_widget(form.destination) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.destination) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.equipment) }}
+                                    {{ form_widget(form.equipment) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.equipment) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.capacity) }}
+                                    {{ form_widget(form.capacity) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.capacity) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.locationTake) }}
+                                    {{ form_widget(form.locationTake) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.locationTake) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.files) }}
+                                    {{ form_widget(form.files) }}
+                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.files) }}</div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_widget(form.submit) }}
+                                </div>
+                                {{ form_widget(form) }}
+                                {{ form_rest(form) }}
+                                {{ form_end(form) }}
+                                {{ form(form) }}
+                </div>
+
+            </section>
 
         </div>
 

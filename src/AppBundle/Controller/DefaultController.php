@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\DevisAutocar;
+use AppBundle\Form\DevisAutocarType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -38,10 +40,29 @@ class DefaultController extends Controller
 
     /**
      * @Route("/autocars-tti", name="autocarsttipage")
-     * @Template()
+     * @Template("@App/Default/autocars_tti.html.twig")
      */
-    public function autocarsTTIAction(Request $request)
+    public function autocarsTtiAction(Request $request)
     {
-        return [];
+        $em = $this->getDoctrine()->getManager();
+
+        $devisAutocar = new DevisAutocar();
+
+        $form = $this->createForm(DevisAutocarType::class, $devisAutocar);
+
+        $form->handleRequest($request);
+
+        if ($request->isMethod('POST')) {
+            if ($form->isSubmitted()) {
+                $em->persist($devisAutocar);
+                $em->flush();
+
+                $this->addFlash('success', 'Nous avons bien reçu votre devis ! Nous reviendrons vers vous dans les plus brefs délais !');
+
+                return ['form' => $form->createView()];
+            }
+        }
+
+        return ['form' => $form->createView()];
     }
 }

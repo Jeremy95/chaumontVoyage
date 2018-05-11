@@ -6,3 +6,4 @@
 /vendor/
 .idea/
 ###< symfony/framework-bundle ###
+app/config/parameters.yml
