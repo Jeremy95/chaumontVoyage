@@ -95,7 +95,7 @@ class DevisAutocar extends AbstractDevis
     /**
      * @Assert\File(
      *      maxSize="1000k",
-     *      mimeTypes = {"image/png", "image/jpeg", "image/gif"}
+     *      mimeTypes = {"image/png", "image/jpeg", "image/gif", "application/pdf"}
      * )
      */
     public $files;
@@ -351,6 +351,11 @@ class DevisAutocar extends AbstractDevis
         return $this->documents;
     }
 
+    public function getUploadRootDir()
+    {
+        return __DIR__ . '/../../../web/documents/devis/autocars/' . $this->name;
+    }
+
     /**
      * Upload documents.
      */
@@ -360,7 +365,7 @@ class DevisAutocar extends AbstractDevis
         }
 
         $this->documents = sha1(uniqid(mt_rand(), true)) . '.' . $this->files->guessExtension();
-        $this->files->move($this->getUploadRootDirAvatar(), $this->documents);
+        $this->files->move($this->getUploadRootDir(), $this->documents);
 
         unset($this->files);
     }

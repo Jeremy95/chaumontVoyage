@@ -54,6 +54,7 @@ class DefaultController extends Controller
 
         if ($request->isMethod('POST')) {
             if ($form->isSubmitted()) {
+                $devisAutocar->uploadDocuments();
                 $em->persist($devisAutocar);
                 $em->flush();
 
