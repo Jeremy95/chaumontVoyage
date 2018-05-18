@@ -1,44 +1,258 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <section id="slider" class="slider-element boxed-slider">
+<section id="slider" class="slider-element slider-parallax revslider-wrap clearfix">
+    <div class="slider-parallax-inner">
+    <div id="rev_slider_k_fullwidth_wrapper" class="rev_slider_wrapper fullwidth-container"  style="padding:0px;">
+        <!-- START REVOLUTION SLIDER 5.1.4 fullwidth mode -->
+        <div id="rev_slider_k_fullwidth" class="rev_slider fullwidthbanner" style="display:none;" data-version="5.1.4">
+            <ul>
+                <!-- SLIDE  -->
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="{{ asset('images/slider/rev/ken-2-thumb.jpg') }}" data-delay="15000"  data-saveperformance="off"  data-title="Unlimited Possibilities">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/slider/rev/ken-2.jpg') }}"  alt="kenburns6" data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on" data-duration="25000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="140" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
 
-        <div class="container clearfix">
+                    <!-- LAYER NR. 2 -->
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                         data-x="middle" data-hoffset="0"
+                         data-y="top" data-voffset="170"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1000"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"   
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; white-space: nowrap;"></div>
 
-            <div class="fslider" data-animation="fade" data-thumbs="true" data-arrows="false" data-speed="1200" data-pause="7000">
-                <div class="flexslider">
-                    <div class="slider-wrap">
-                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/19-mercedes.jpg') }}">
-                            <a href="#">
-                                <img src="{{ asset('images/slider/autocars/20160104_164212.jpg') }}" alt="Slide 4">
-                                <div class="flex-caption slider-caption-bg slider-caption-top-right">Des autocars tout confort un voyage agréable</div>
-                            </a>
-                        </div>
-                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/inside-thumb.jpg') }}">
-                            <a href="#">
-                                {#<img src="{{ asset('images/slider/autocars/inside.jpeg') }}" alt="Slide 2">#}
-                                <div class="flex-caption slider-caption-bg">Responsive Ready Design</div>
-                            </a>
-                        </div>
-                        <div class="slide" data-thumb="{{ asset('images/slider/autocars/outside-thumb.jpg') }}">
-                            <a href="#">
-                                <img src="{{ asset('images/slider/autocars/20160104_164249.jpg') }}" alt="Slide 3">
-                                <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-top-left">Retina Graphics Display</div>
-                            </a>
-                        </div>
-                        <div class="slide" data-thumb="{{ asset('images/slider/boxed/thumbs/5.jpg') }}">
-                            <a href="#">
-                                <img src="{{ asset('images/slider/autocars/20160104_162936.jpg') }}" alt="Slide 5">
-                                <div class="flex-caption slider-caption-bg slider-caption-bg-light slider-caption-bottom-right">eCommerce Design Included</div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+                         data-x="middle" data-hoffset="0"
+                         data-y="top" data-voffset="185"
+                         data-fontsize="['60','50','50','40']"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1200"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; white-space: nowrap;">Unlimited Possibilities</div>
 
+                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text"
+                         data-x="middle" data-hoffset="0"
+                         data-y="top" data-voffset="295"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-lineheight="['30','30','34','26']"
+                         data-width="['750','750','480','360']"
+                         data-start="1400"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-textAlign="center"
+                         data-endeasing="Power4.easeIn" style="z-index: 3; color: #333; max-width: 650px; white-space: normal;">Create whatever you require for your Business to bloom with Tons of Customization Possibilities.</div>
+
+                    <div class="tp-caption ltl tp-resizeme"
+                         data-x="middle" data-hoffset="0"
+                         data-y="top" data-voffset="405"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1550"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="z-index: 3;"><a href="#" class="button button-border button-large button-rounded tright nomargin"><span>Browse</span><i class="icon-angle-right"></i></a></div>
+
+                </li>
+
+                <li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="{{ asset('images/slider/rev/bg1-thumb.jpg') }}"  data-saveperformance="off"  data-title="Fixed-Size Video">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/slider/rev/bg1.jpg') }}"  alt="citybg" data-lazyload="{{ asset('images/slider/rev/bg1.jpg') }}" data-bgposition="center top" data-scale="cover" data-bgrepeat="no-repeat">
+                    <!-- LAYERS -->
+
+                    <!-- LAYER NR. 1 -->
+                    <div class="tp-caption ltl tp-resizeme"
+                         data-x="['left','left','left','left']" data-hoffset="['670','670','100','0']"
+                         data-y="['top','top','bottom','bottom']" data-voffset="['45','45','0','0']"
+                         data-transform_in="x:250;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:400;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-speed="400"
+                         data-start="1000"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn"><img src="{{ asset('images/services/imac2.png') }}" alt="imac"></div>
+
+                    <div class="tp-caption ltl tp-resizeme"
+                         data-x="['left','left','right','right']" data-hoffset="['1000','1000','180','0']"
+                         data-y="['top','top','bottom','bottom']" data-voffset="['320','320','0','0']"
+                         data-transform_in="x:0;y:100;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:400;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-speed="400"
+                         data-start="1200"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn"><img src="{{ asset('images/services/iphone3.png') }}" alt="iphone"></div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                         data-x="['left','left','left','left']" data-hoffset="['20','20','20','20']"
+                         data-y="['top','top','top','top']" data-voffset="['165','165','165','40']"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1000"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="white-space: nowrap;">Have Multiple Devices? No Worries!</div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+                         data-x="['left','left','left','left']" data-hoffset="['17','17','17','17']"
+                         data-y="['top','top','top','top']" data-voffset="['180','180','180','65']"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-fontsize="['56','56','50','40']"
+                         data-speed="800"
+                         data-start="1200"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="font-size: 56px; white-space: nowrap;">Responsive Retina Ready</div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft"
+                         data-x="['left','left','left','left']" data-hoffset="['20','20','20','20']"
+                         data-y="['top','top','top','top']" data-voffset="['280','280','280','165']"
+                         data-width="['550','550','480','400']"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1400"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="max-width: 550px; white-space: normal;">Canvas has Mobile Ready Design &amp; Retina Graphics Support for seamless experience on all types of Devices.</div>
+
+                    <div class="tp-caption ltl tp-resizeme"
+                         data-x="['left','left','left','left']" data-hoffset="['20','20','20','20']"
+                         data-y="['top','top','top','top']" data-voffset="['385','385','385','270']"
+                         data-transform_in="x:0;y:150;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1550"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Start Tour</span> <i class="icon-angle-right"></i></a></div>
+
+                </li>
+                <li class="dark" data-transition="zoomout" data-slotamount="1" data-masterspeed="1500" data-thumb="{{ asset('images/slider/rev/bg2-thumb.jpg') }}"  data-saveperformance="off"  data-title="Fixed-Size Video">
+                    <!-- MAIN IMAGE -->
+                    <img src="{{ asset('images/slider/rev/bg2.jpg') }}"  alt="kenburns6" data-bgposition="left bottom" data-bgpositionend="right top" data-kenburns="on" data-duration="20000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="120" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                    <!-- LAYERS -->
+
+                    <div class="tp-caption"
+                         data-x="['left','left','left','left']" data-hoffset="['20','20','30','30']"
+                         data-y="['top','top','top','top']" data-voffset="['130','130','130','130']"
+                         data-transform_in="x:0;y:0;z:0;rotationZ:0;scaleX:0.6;scaleY:0.6;skewX:0;skewY:0;s:850;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
+                         data-speed="850"
+                         data-start="1200"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-videowidth="['600','500','650','420']"
+                         data-videoheight="['340','283','368','238']"
+                         data-endeasing="Power4.easeIn"><iframe src='http://player.vimeo.com/video/102501580?title=0&byline=0&portrait=0;api=1' width='600' height='340' style='width:600px;height:340px;border: none !important;'></iframe></div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-caps-text uppercase"
+                         data-x="['left','left','left','left']" data-hoffset="['675','575','30','30']"
+                         data-y="['top','top','top','top']" data-voffset="['165','165','530','430']"
+                         data-transform_in="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1000"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="white-space: nowrap;">Need to show Videos?</div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-emphasis-text nopadding noborder"
+                         data-x="['left','left','left','left']" data-hoffset="['672','572','30','30']"
+                         data-y="['top','top','top','top']" data-voffset="['180','180','555','455']"
+                         data-fontsize="['56','50','40','30']"
+                         data-transform_in="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1200"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="font-size: 56px; white-space: nowrap;">Embedded Videos</div>
+
+                    <div class="tp-caption ltl tp-resizeme revo-slider-desc-text tleft"
+                         data-x="['left','left','left','left']" data-hoffset="['675','575','30','30']"
+                         data-y="['top','top','top','top']" data-voffset="['280','280','655','555']"
+                         data-transform_in="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1400"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn" style="max-width: 450px; white-space: normal;">Show off your Youtube or Vimeo Videos in Style with an Autoplay Option.</div>
+
+                    <div class="tp-caption ltl tp-resizeme"
+                         data-x="['left','left','left','left']" data-hoffset="['675','575','30','30']"
+                         data-y="['top','top','top','top']" data-voffset="['385','385','760','630']"
+                         data-transform_in="x:140;y:0;z:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;s:800;e:Power4.easeOutQuad;"
+                         data-speed="800"
+                         data-start="1550"
+                         data-easing="easeOutQuad"
+                         data-splitin="none"
+                         data-splitout="none"
+                         data-elementdelay="0.01"
+                         data-endelementdelay="0.1"
+                         data-endspeed="1000"
+                         data-endeasing="Power4.easeIn"><a href="#" class="button button-border button-white button-light button-large button-rounded tright nomargin"><span>Embed Now</span> <i class="icon-angle-right"></i></a></div>
+
+                </li>
+            </ul>
         </div>
-
-    </section>
+    </div>
+    </div>
+</section>
 
     <section id="content" style="background-color: #F9F9F9">
 
@@ -56,7 +270,7 @@
                             <img src="{{ asset('images/services/1.jpg') }}" alt="Why choose Us?">
                         </div>
                         <div class="fbox-desc">
-                            <h3>Flotte d'autocars.<span class="subtitle">Because we are Reliable.</span></h3>
+                            <h3>Flotte d'autocars.<span class="subtitle"></span></h3>
                             <p>Nous mettons à votre disposition des autocars de 22 à 83 places.
                                 Tous équipés de vidéo, air conditionné,  réfrigérateur, sièges inclinables, et toilettes (à partir de 33 places).
                         </div>
@@ -69,7 +283,7 @@
                             <img src="{{ asset('images/services/2.jpg') }}" alt="Why choose Us?">
                         </div>
                         <div class="fbox-desc">
-                            <h3>Couchettes & remorques<span class="subtitle">To Redefine your Brand.</span></h3>
+                            <h3>Couchettes & remorques<span class="subtitle"></span></h3>
                             <p>Des cars couchettes de 40 à 50 places pour que vos week-ends soient plus confortables.
                                 Pour transporter votre matériel ou bagages de tous types, des remorques de 9 à 24 <m3></m3>.</p>
                         </div>
@@ -82,7 +296,7 @@
                             <img src="{{ asset('images/services/3.jpg') }}" alt="Why choose Us?">
                         </div>
                         <div class="fbox-desc">
-                            <h3>Sécurité et sureté.<span class="subtitle">Make our Customers Happy.</span></h3>
+                            <h3>Sécurité et sureté.<span class="subtitle"></span></h3>
                             <p>Pour notre société il s'agit d'un enjeu majeur : le respect de la réglementation en vigueur est donc indispensable. La sécurité, un engagement que nous respectons.</p>
                         </div>
                     </div>
@@ -115,10 +329,15 @@
 
                     <div class="heading-block">
                         <h3>Sécurité</h3>
-                        <span>Benchmarking your website's performance helps you make great choices for your business.</span>
+                        <span></span>
                     </div>
 
-                    <p>La sécurité représente la préocupation majeure de notre activité au quotidien, outre que notre matériel soit de dernière génération, nous apportons une attention constante à son parfait entretien afin de conserver le niveau de disponibilité optimale, dans le but de vous satisfaire pleinement. Ainsi, pour notre société, la sécurité n' est pas seulement un mot, mais un réel enjeux que nous nous efforçons de maintenir au plus haut niveau</p>
+                    <p>
+                        La sécurité représente la préocupation majeure de notre activité au quotidien, outre que notre matériel soit de
+                        dernière génération, nous apportons une attention constante à son parfait entretien afin de conserver le niveau de disponibilité optimale,
+                        dans le but de vous satisfaire pleinement. Ainsi, pour notre société, la sécurité n' est pas seulement un mot, mais un réel enjeux que nous
+                        nous efforçons de maintenir au plus haut niveau
+                    </p>
 
                     <div class="col_four_fifth">
                         <ul>
@@ -152,107 +371,105 @@
                                 <h3>Devis Transport</h3>
                             </div>
 
-                                {{ form_start(form) }}
-                                <div class="form-group">
+                            {{ form_start(form) }}
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.title) }}
                                     {{ form_widget(form.title) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.title) }}</div>
                                 </div>
-                                <div class="form-group">
-                                    {{ form_label(form.name) }}
-                                    {{ form_widget(form.name) }}
-
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.name) }}</div>
-                                </div>
-                                <div class="form-group">
-                                    {{ form_label(form.nickname) }}
-                                    {{ form_widget(form.nickname) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.nickname) }}</div>
-                                </div>
-                                <div class="form-group">
-                                    {{ form_label(form.phone) }}
-                                    {{ form_widget(form.phone) }}
-
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.phone) }}</div>
-                                </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.email) }}
                                     {{ form_widget(form.email) }}
-
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.email) }}</div>
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    {{ form_label(form.nickname) }}
+                                    {{ form_widget(form.nickname) }}
+                                </div>
+                                <div class="col">
+                                    {{ form_label(form.phone) }}
+                                    {{ form_widget(form.phone) }}
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    {{ form_label(form.name) }}
+                                    {{ form_widget(form.name) }}
+                                </div>
+                                <div class="col">
                                     {{ form_label(form.address) }}
                                     {{ form_widget(form.address) }}
-
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.address) }}</div>
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.city) }}
                                     {{ form_widget(form.city) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.city) }}</div>
                                 </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.society) }}
                                     {{ form_widget(form.society) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.society) }}</div>
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.departDate) }}
                                     {{ form_widget(form.departDate) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.departDate) }}</div>
-
                                 </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.departHour) }}
                                     {{ form_widget(form.departHour) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.departHour) }}</div>
-
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.arrivedDate) }}
                                     {{ form_widget(form.arrivedDate) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.arrivedDate) }}</div>
-
                                 </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.arrivedHour) }}
                                     {{ form_widget(form.arrivedHour) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.arrivedHour) }}</div>
-
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
+                                    {{ form_label(form.comments) }}
+                                    {{ form_widget(form.comments) }}
+                                </div>
+                                <div class="col">
                                     {{ form_label(form.destination) }}
                                     {{ form_widget(form.destination) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.destination) }}</div>
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.equipment) }}
                                     {{ form_widget(form.equipment) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.equipment) }}</div>
                                 </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.capacity) }}
                                     {{ form_widget(form.capacity) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.capacity) }}</div>
                                 </div>
-                                <div class="form-group">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col">
                                     {{ form_label(form.locationTake) }}
                                     {{ form_widget(form.locationTake) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.locationTake) }}</div>
                                 </div>
-                                <div class="form-group">
+                                <div class="col">
                                     {{ form_label(form.files) }}
                                     {{ form_widget(form.files) }}
-                                    <div class="col-md-9 col-md-offset-3 error-message">{{ form_errors(form.files) }}</div>
                                 </div>
-                                <div class="form-group">
-                                    {{ form_widget(form.submit) }}
-                                </div>
-                                {{ form_widget(form) }}
-                                {{ form_rest(form) }}
-                                {{ form_end(form) }}
-                                {{ form(form) }}
+                            </div>
+                            <div class="form-group row">
+                                {{ form_widget(form.submit) }}
+                            </div>
+                            {{ form_widget(form) }}
+                            {{ form_rest(form) }}
+                            {{ form_end(form) }}
+                            {{ form(form) }}
+                    </div>
                 </div>
 
             </section>
@@ -260,4 +477,5 @@
         </div>
 
     </section><!-- #content end -->
+
 {% endblock %}

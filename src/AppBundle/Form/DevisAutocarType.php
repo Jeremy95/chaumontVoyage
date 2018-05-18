@@ -8,6 +8,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -30,28 +31,28 @@ class DevisAutocarType extends AbstractType
                     'Mr' => 'Mr',
                     'Mme' => 'Mme',
                     'Mlle' => 'Mlle',
-                ), 'attr' => array('class' => 'form-control'))
+                ), 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('name', TextType::class,
-                array('label' => 'Nom de famille', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Nom de famille', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('nickname', TextType::class,
-                array('label' => 'Prénom', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Prénom', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('phone', TextType::class,
-                array('label' => 'Tél :', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Tél :', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('address', TextType::class,
-                array('label' => 'Adresse', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Adresse', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('city', TextType::class,
-                array('label' => 'Ville', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Ville', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('email', TextType::class,
-                array('label' => 'Adresse de courriel', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Adresse de courriel', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('society', TextType::class,
-                array('label' => 'Société', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Société', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('departDate', DateType::class,
                 array('label' => 'Date de départ')
@@ -65,8 +66,13 @@ class DevisAutocarType extends AbstractType
             ->add('arrivedHour', TimeType::class,
                 array('label' => 'Heure d\'arrivée')
             )
+            ->add('comments', TextareaType::class, [
+                'attr' => [
+                    'class' => 'form-control'
+                ]
+            ])
             ->add('destination', TextType::class,
-                array('label' => 'Destination', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Destination', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('equipment', ChoiceType::class,
                 array(
@@ -80,16 +86,16 @@ class DevisAutocarType extends AbstractType
                 )
             )
             ->add('capacity', IntegerType::class,
-                array('label' => 'Capacité', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Capacité', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('locationTake', TextType::class,
-                array('label' => 'Lieu de prise en charge', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Lieu de prise en charge', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('files', FileType::class,
-                array('label' => 'Documents', 'attr' => array('class' => 'form-control'))
+                array('label' => 'Documents', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('submit', SubmitType::class,
-                array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-primary btn-block post-form-button form-control'))
+                array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-primary post-form-button form-control form-control-sm'))
             );
     }
 

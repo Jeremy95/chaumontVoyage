@@ -60,6 +60,13 @@ class AbstractDevis
     protected $email;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="comments", type="text")
+     */
+    private $comments;
+
+    /**
      * @return mixed
      */
     public function getTitle()
@@ -170,4 +177,21 @@ class AbstractDevis
     {
         $this->email = $email;
     }
+
+    /**
+     * @return string
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param string $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
 }
