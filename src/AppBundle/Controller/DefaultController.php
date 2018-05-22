@@ -2,7 +2,9 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Contact;
 use AppBundle\Entity\DevisAutocar;
+use AppBundle\Form\ContactType;
 use AppBundle\Form\DevisAutocarType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -26,7 +28,26 @@ class DefaultController extends Controller
      */
     public function contactAction(Request $request)
     {
-        return [];
+        $em = $this->getDoctrine()->getManager();
+
+        $contact = new Contact();
+
+        $form = $this->createForm(ContactType::class, $contact);
+
+        $form->handleRequest($request);
+
+        if ($request->isMethod('POST')) {
+            if ($form->isSubmitted()) {
+                $em->persist($contact);
+                $em->flush();
+
+                $this->addFlash('success', 'Nous avons bien reçu votre devis ! Nous reviendrons vers vous dans les plus brefs délais !');
+
+                return ['form' => $form->createView()];
+            }
+        }
+
+        return ['form' => $form->createView()];
     }
 
     /**

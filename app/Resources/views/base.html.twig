@@ -31,6 +31,13 @@
 </head>
 
 <body class="stretched">
+{% for label, messages in app.flashes(['warning', 'error']) %}
+    {% for message in messages %}
+        <div class="alert alert-{{ label }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endfor %}
 <!-- Document Wrapper
 ============================================= -->
 <div id="wrapper" class="clearfix">
