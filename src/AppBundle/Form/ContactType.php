@@ -54,7 +54,7 @@ class ContactType extends AbstractType
                 ]
             ])
             ->add('submit', SubmitType::class,
-                array('label' => 'Envoyer', 'attr' => array('class' => 'btn btn-primary post-form-button form-control form-control-sm'))
+                array('label' => 'Envoyer', 'attr' => array('class' => 'button button-3d nomargin'))
             );
     }
 
