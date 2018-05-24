@@ -51,10 +51,10 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/notre-agence", name="chaumontvoyagepage")
+     * @Route("/notre-agence", name="chaumontvoyagespage")
      * @Template()
      */
-    public function chaumontVoyageAction(Request $request)
+    public function chaumontvoyagesAction(Request $request)
     {
         return [];
     }
@@ -64,6 +64,24 @@ class DefaultController extends Controller
      * @Template("@App/Default/autocars_tti.html.twig")
      */
     public function autocarsTtiAction(Request $request)
+    {
+       return [];
+    }
+
+    /**
+     * @Route("/notre-flotte", name="flottepage")
+     * @Template()
+     */
+    public function flotteAction(Request $request)
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/devis", name="devispage")
+     * @Template("@App/Default/devis.html.twig")
+     */
+    public function devisAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
 

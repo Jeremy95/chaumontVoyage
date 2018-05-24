@@ -69,11 +69,12 @@
                         </li>
 
                         <li {% if app.request.attributes.get('_route') == 'autocarsttipage' %} class="current"{% endif %}><a href="{{ path('autocarsttipage') }}"><div>AUTOCARS TTI</div></a>
-
+                            <ul><li {% if app.request.attributes.get('_route') == 'flottepage' %} class="current"{% endif %}><a href="{{ path('flottepage') }}"><div>Notre flotte d'autocars</div></a></li>
+                                <li {% if app.request.attributes.get('_route') == 'devispage' %} class="current"{% endif %}><a href="{{ path('devispage') }}"><div>Devis</div></a></li>
+                            </ul>
                         </li>
                         
-                        <li {% if app.request.attributes.get('_route') == 'chaumontvoyagepage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagepage') }}"><div>NOS AGENCES</div></a>
-
+                        <li {% if app.request.attributes.get('_route') == 'chaumontvoyagespage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagespage') }}"><div>NOTRE AGENCE</div></a>
                         </li>
 
                         <li {% if app.request.attributes.get('_route') == 'contactpage' %} class="current"{% endif %}><a href="{{ path('contactpage') }}"><div>CONTACT</div>{#<span>Buy Now</span>#}</a>
@@ -109,7 +110,7 @@
 
                 <div class="col_half col_last tright">
                     <div class="copyrights-menu copyright-links fright clearfix">
-                        <a href="{{ path('homepage') }}">Accueil</a>/<a href="{{ path('chaumontvoyagepage') }}">Nos agences</a>/<a href="{{ path('autocarsttipage') }}">Autocars TTI</a>/<a href="{{ path('contactpage') }}">Contact</a>
+                        <a href="{{ path('homepage') }}">Accueil</a>/<a href="{{ path('chaumontvoyagespage') }}">Nos agences</a>/<a href="{{ path('autocarsttipage') }}">Autocars TTI</a>/<a href="{{ path('contactpage') }}">Contact</a>
                     </div>
                     <div class="fright clearfix">
                         <a href="#" class="social-icon si-small si-borderless nobottommargin si-facebook">
