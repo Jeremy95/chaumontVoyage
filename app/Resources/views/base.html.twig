@@ -73,8 +73,9 @@
                                 <li {% if app.request.attributes.get('_route') == 'devispage' %} class="current"{% endif %}><a href="{{ path('devispage') }}"><div>Devis</div></a></li>
                             </ul>
                         </li>
-                        
-                        <li {% if app.request.attributes.get('_route') == 'chaumontvoyagespage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagespage') }}"><div>NOTRE AGENCE</div></a>
+
+                        <li {% if app.request.attributes.get('_route') == 'chaumontvoyagepage' %} class="current"{% endif %}><a href="{{ path('chaumontvoyagespage') }}"><div>NOS AGENCES</div></a>
+
                         </li>
 
                         <li {% if app.request.attributes.get('_route') == 'contactpage' %} class="current"{% endif %}><a href="{{ path('contactpage') }}"><div>CONTACT</div>{#<span>Buy Now</span>#}</a>

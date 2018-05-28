@@ -61,7 +61,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/autocars-tti", name="autocarsttipage")
-     * @Template("@App/Default/autocars_tti.html.twig")
+     * @Template("@App/default/autocars_tti.html.twig")
      */
     public function autocarsTtiAction(Request $request)
     {
