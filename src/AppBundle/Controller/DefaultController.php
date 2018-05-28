@@ -79,7 +79,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/devis", name="devispage")
-     * @Template("@App/Default/devis.html.twig")
+     * @Template("@App/default/devis.html.twig")
      */
     public function devisAction(Request $request)
     {
