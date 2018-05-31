@@ -69,7 +69,8 @@ class DevisAutocarType extends AbstractType
             ->add('comments', TextareaType::class, [
                 'attr' => [
                     'class' => 'form-control'
-                ]
+                ],
+                'label' => 'Commentaires'
             ])
             ->add('destination', TextType::class,
                 array('label' => 'Destination', 'attr' => array('class' => 'form-control form-control-sm'))
@@ -82,6 +83,7 @@ class DevisAutocarType extends AbstractType
                         'Videos' => 'Videos',
                     ],
                     'multiple' => true,
+                    'expanded' => true,
                     'label' => 'Equipements souhaités'
                 )
             )
