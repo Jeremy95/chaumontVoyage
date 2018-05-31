@@ -8,7 +8,11 @@
     <!-- Stylesheets
     ============================================= -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+    {% if app.request.pathInfo != '/notre-flotte' %}
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+    {% else %}
+        <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    {% endif %}
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/swiper.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/dark.css') }}" type="text/css" />
@@ -16,6 +20,7 @@
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" />
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('css/bootstrap-modal-carousel.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- SLIDER REVOLUTION 5.x CSS SETTINGS -->
@@ -458,10 +463,15 @@
 <!-- External JavaScripts
 ============================================= -->
 <script src="{{ asset('js/jquery.js') }}"></script>
-<script src="{{ asset('js/plugins.js') }}"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap-modal-carousel.js') }}"></script>
+
 
 <!-- Footer Scripts
 ============================================= -->
+{% if app.request.pathInfo != '/notre-flotte' %}
+    <script src="{{ asset('js/plugins.js') }}"></script>
+{% endif %}
 <script src="{{ asset('js/functions.js') }}"></script>
 <script src="{{ asset('js/rs-plugin/js/jquery.themepunch.tools.min.js') }}"></script>
 <script src="{{ asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js') }}"></script>
@@ -474,14 +484,11 @@
 <script src="{{ asset('js/rs-plugin/js/extensions/revolution.extension.navigation.min.js') }}"></script>
 <script src="{{ asset('js/rs-plugin/js/extensions/revolution.extension.migration.min.js') }}"></script>
 <script src="{{ asset('js/rs-plugin/js/extensions/revolution.extension.parallax.min.js') }}"></script>
-<script>
+<script type="application/javascript">
 
-    var tpj=jQuery;
-    tpj.noConflict();
+    $(document).ready(function() {
 
-    tpj(document).ready(function() {
-
-        var apiRevoSlider = tpj('#rev_slider_k_fullwidth').show().revolution(
+        var apiRevoSlider = $('#rev_slider_k_fullwidth').show().revolution(
             {
                 sliderType:"standard",
                 sliderLayout:"fullwidth",
@@ -492,7 +499,7 @@
                 responsiveLevels:[1240,1024,778,480],
                 visibilityLevels:[1240,1024,778,480],
                 gridwidth:[1240,1024,778,480],
-                gridheight:[600,768,960,720],
+                gridheight:[600,768,960,720]
             });
 
         apiRevoSlider.bind("revolution.slide.onloaded",function (e) {
@@ -502,7 +509,6 @@
         apiRevoSlider.bind("revolution.slide.onchange",function (e,data) {
             SEMICOLON.slider.revolutionSliderMenu();
         });
-
     });
 
 </script>
