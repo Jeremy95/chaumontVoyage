@@ -18,45 +18,59 @@
 
                     <div class="contact-widget">
 
-                        <div class="contact-form-result"></div>
+                        {#<div class="contact-form-result"></div>#}
 
                         {{ form_start(form, {attr: {class: 'nobottommargin', id: 'template-contactform'}}) }}
                         <div class="form-group row">
                             <div class="col">
                                 {{ form_label(form.title) }}
                                 {{ form_widget(form.title) }}
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col">
-                                {{ form_label(form.email) }}
-                                {{ form_widget(form.email) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.name) }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col">
                                 {{ form_label(form.name) }}
                                 {{ form_widget(form.name) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.name) }}</div>
                             </div>
                             <div class="col">
                                 {{ form_label(form.nickname) }}
                                 {{ form_widget(form.nickname) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.nickname) }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col">
                                 {{ form_label(form.phone) }}
                                 {{ form_widget(form.phone) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.phone) }}</div>
                             </div>
                             <div class="col">
                                 {{ form_label(form.society) }}
                                 {{ form_widget(form.society) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.society) }}</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                {{ form_label(form.email) }}
+                                {{ form_widget(form.email) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.email) }}</div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                {{ form_label(form.fax) }}
+                                {{ form_widget(form.fax) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.fax) }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col">
                                 {{ form_label(form.comments) }}
                                 {{ form_widget(form.comments) }}
+                                <div class="col-sm-12 error-message">{{ form_errors(form.comments) }}</div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -122,8 +136,6 @@
                             <h3>Email<span class="subtitle">info @chaumont-voyages.fr</span></h3>
                         </div>
                     </div>
-
-
                 </div><!-- Contact Info End -->
 
             </div>

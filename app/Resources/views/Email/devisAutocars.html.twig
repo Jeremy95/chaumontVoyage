@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Devis Autocars</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<style>
+    .liste > li {
+        list-style: none;
+    }
+</style>
+
+<h3>Demande de devis autocars par {{ devisAutocars.title }} {{ devisAutocars.name|upper }} {{ devisAutocars.nickname|upper }}</h3>
+
+<p>{{ devisAutocars.comments | raw}}</p>
+
+<ul class="liste">
+    <li>Destination : {{ devisAutocars.destination }}</li>
+    <li>Date de départ : {{ devisAutocars.departDate | date('d/m/Y') }}</li>
+    <li>Heure de départ : {{ devisAutocars.departHour | date('H:i:s') }}</li>
+    <li>Date d'arrivée : {{ devisAutocars.arrivedDate | date('d/m/Y') }}</li>
+    <li>Heure d'arrivée : {{ devisAutocars.arrivedHour | date('H:i:s') }}</li>
+    <li>Capacité : {{ devisAutocars.capacity }}</li>
+
+<li>Equipements souhaités :
+    <ul>
+        {% for equip in devisAutocars.equipment %}
+            <li>{{ equip }}</li>
+        {% endfor %}
+    </ul>
+</li>
+<li>Lieu de prise en charge : {{ devisAutocars.locationTake }}</li>
+<li>Ville : {{ devisAutocars.city }}</li>
+<li>Email : {{ devisAutocars.email }}</li>
+<li>Tél : {{ devisAutocars.phone }}</li>
+
+
+
+
+
+<p>Cordialement,<br/>
+    L’équipe Chaumont Voyages.</p>
+</body>
+</html>

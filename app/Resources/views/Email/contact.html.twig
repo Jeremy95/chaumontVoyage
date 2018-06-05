@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+
+<h3>Demande de contact par {{ contact.title }} {{ contact.name|upper }} {{ contact.nickname|upper }}</h3>
+
+<p>{{ contact.comments | raw}}</p>
+
+<p>Société : {{ contact.society }}</p>
+<p>Email : {{ contact.email }}</p>
+<p>Tél : {{ contact.phone }}</p>
+{% if contact.fax is not null and contact.fax is not empty %}
+    <p>Fax : {{ contact.fax }}</p>
+{% endif %}
+
+
+<p>Cordialement,<br/>
+    L’équipe Chaumont Voyages.</p>
+</body>
+</html>

@@ -52,7 +52,7 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="phone", type="string", length=255)
+     * @ORM\Column(name="phone", type="integer", length=255)
      */
     private $phone;
 
@@ -66,7 +66,7 @@ class Contact
     /**
      * @var string
      *
-     * @ORM\Column(name="fax", type="string", length=255)
+     * @ORM\Column(name="fax", type="integer", length=255, nullable=true)
      */
     private $fax;
 

@@ -8,6 +8,7 @@ use AppBundle\Form\ContactType;
 use AppBundle\Form\DevisAutocarType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
+use Swift_Attachment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -40,10 +41,21 @@ class DefaultController extends Controller
             if ($form->isSubmitted()) {
                 $em->persist($contact);
                 $em->flush();
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Prise de contact')
+                    ->setFrom('no-reply@chaumont-voyages.fr')
+                    ->setTo('jerem.b95@gmail.com')
+                    ->setBody(
+                        $this->render(':Email:contact.html.twig', array('contact' => $contact)),
+                        'text/html'
+                    );
+                $message->addPart($message->getBody(), 'text/plain');
+                $mailer = $this->get('mailer');
+                $mailer->send($message);
 
                 $this->addFlash('success', 'Nous avons bien reçu votre devis ! Nous reviendrons vers vous dans les plus brefs délais !');
 
-                return ['form' => $form->createView()];
+                return $this->redirectToRoute('contactpage');
             }
         }
 
@@ -96,6 +108,20 @@ class DefaultController extends Controller
                 $devisAutocar->uploadDocuments();
                 $em->persist($devisAutocar);
                 $em->flush();
+
+                $message = \Swift_Message::newInstance()
+                    ->setSubject('Demande de devis autocars')
+                    ->setFrom('no-reply@chaumont-voyages.fr')
+                    ->setTo('jerem.b95@gmail.com')
+                    ->setBody(
+                        $this->render(':Email:devisAutocars.html.twig', array('devisAutocars' => $devisAutocar)),
+                        'text/html'
+                    )
+                    ->attach(Swift_Attachment::fromPath($devisAutocar->getUploadRootDir() . '/' . $devisAutocar->getDocuments()))
+                ;
+                $message->addPart($message->getBody(), 'text/plain');
+                $mailer = $this->get('mailer');
+                $mailer->send($message);
 
                 $this->addFlash('success', 'Nous avons bien reçu votre devis ! Nous reviendrons vers vous dans les plus brefs délais !');
 

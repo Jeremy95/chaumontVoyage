@@ -2078,9 +2078,9 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.textRotater();
 			SEMICOLON.widget.carousel();
 			SEMICOLON.widget.linkScroll();
-			SEMICOLON.widget.contactForm();
-			SEMICOLON.widget.subscription();
-			SEMICOLON.widget.quickContact();
+			//SEMICOLON.widget.contactForm();
+			//SEMICOLON.widget.subscription();
+			//SEMICOLON.widget.quickContact();
 			SEMICOLON.widget.stickySidebar();
 			SEMICOLON.widget.cookieNotify();
 			SEMICOLON.widget.extras();
@@ -3135,7 +3135,7 @@ var SEMICOLON = SEMICOLON || {};
 			});
 		},
 
-		contactForm: function(){
+		/*contactForm: function(){
 
 			if( !$().validate ) {
 				console.log('contactForm: Form Validate not Defined.');
@@ -3204,9 +3204,9 @@ var SEMICOLON = SEMICOLON || {};
 				});
 
 			});
-		},
+		},*/
 
-		subscription: function(){
+		/*subscription: function(){
 
 			if( !$().validate ) {
 				console.log('subscription: Form Validate not Defined.');
@@ -3274,9 +3274,9 @@ var SEMICOLON = SEMICOLON || {};
 				});
 
 			});
-		},
+		},*/
 
-		quickContact: function(){
+		/*quickContact: function(){
 
 			if( !$().validate ) {
 				console.log('quickContact: Form Validate not Defined.');
@@ -3347,7 +3347,7 @@ var SEMICOLON = SEMICOLON || {};
 				});
 
 			});
-		},
+		},*/
 
 		stickySidebar: function(){
 

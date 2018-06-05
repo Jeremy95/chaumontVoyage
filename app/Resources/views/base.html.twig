@@ -36,13 +36,7 @@
 </head>
 
 <body class="stretched">
-{% for label, messages in app.flashes(['warning', 'error']) %}
-    {% for message in messages %}
-        <div class="alert alert-{{ label }}">
-            {{ message }}
-        </div>
-    {% endfor %}
-{% endfor %}
+
 <!-- Document Wrapper
 ============================================= -->
 <div id="wrapper" class="clearfix">
@@ -96,6 +90,13 @@
 
     </header>
 
+    {% for label, messages in app.flashes(['warning', 'error', 'success']) %}
+        {% for message in messages %}
+            <div class="alert alert-{{ label }}" id="message-flash">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endfor %}
 {% block body %}
     
 {% endblock %}
@@ -508,6 +509,11 @@
 
         apiRevoSlider.bind("revolution.slide.onchange",function (e,data) {
             SEMICOLON.slider.revolutionSliderMenu();
+        });
+
+        $('#message-flash').on('click', function (e) {
+            e.preventDefault();
+            $(this).fadeOut(300);
         });
     });
 

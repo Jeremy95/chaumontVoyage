@@ -39,16 +39,20 @@ class ContactType extends AbstractType
             ->add('nickname', TextType::class,
                 array('label' => 'Prénom', 'attr' => array('class' => 'form-control form-control-sm'))
             )
-            ->add('phone', TextType::class,
+            ->add('phone', IntegerType::class,
                 array('label' => 'Tél :', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('email', TextType::class,
                 array('label' => 'Email', 'attr' => array('class' => 'form-control form-control-sm'))
             )
+            ->add('fax', IntegerType::class,
+                array('label' => 'Fax', 'attr' => array('class' => 'form-control form-control-sm'))
+            )
             ->add('society', TextType::class,
                 array('label' => 'Société', 'attr' => array('class' => 'form-control form-control-sm'))
             )
             ->add('comments', TextareaType::class, [
+                'label' => 'Commentaires',
                 'attr' => [
                     'class' => 'form-control'
                 ]
