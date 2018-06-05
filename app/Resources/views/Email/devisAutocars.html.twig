@@ -23,24 +23,23 @@
     <li>Date d'arrivée : {{ devisAutocars.arrivedDate | date('d/m/Y') }}</li>
     <li>Heure d'arrivée : {{ devisAutocars.arrivedHour | date('H:i:s') }}</li>
     <li>Capacité : {{ devisAutocars.capacity }}</li>
+    <li>Equipements souhaités :
+        <ul>
+            {% for equip in devisAutocars.equipment %}
+                <li>{{ equip }}</li>
+            {% endfor %}
+        </ul>
+    </li>
+    <li>Lieu de prise en charge : {{ devisAutocars.locationTake }}</li>
+    <li>Ville : {{ devisAutocars.city }}</li>
+    <li>Email : {{ devisAutocars.email }}</li>
+    <li>Tél : {{ devisAutocars.phone }}</li>
+</ul>
 
-<li>Equipements souhaités :
-    <ul>
-        {% for equip in devisAutocars.equipment %}
-            <li>{{ equip }}</li>
-        {% endfor %}
-    </ul>
-</li>
-<li>Lieu de prise en charge : {{ devisAutocars.locationTake }}</li>
-<li>Ville : {{ devisAutocars.city }}</li>
-<li>Email : {{ devisAutocars.email }}</li>
-<li>Tél : {{ devisAutocars.phone }}</li>
+<footer>
+    <p>Cordialement,<br/>
+        L’équipe Chaumont Voyages.</p>
+</footer>
 
-
-
-
-
-<p>Cordialement,<br/>
-    L’équipe Chaumont Voyages.</p>
 </body>
 </html>

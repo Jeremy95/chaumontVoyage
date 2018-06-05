@@ -125,7 +125,7 @@ class DefaultController extends Controller
 
                 $this->addFlash('success', 'Nous avons bien reçu votre devis ! Nous reviendrons vers vous dans les plus brefs délais !');
 
-                return ['form' => $form->createView()];
+                return $this->redirectToRoute('devispage');
             }
         }
 
