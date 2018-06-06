@@ -102,6 +102,7 @@ class DefaultController extends Controller
         $form = $this->createForm(DevisAutocarType::class, $devisAutocar);
 
         $form->handleRequest($request);
+        $logger = $this->get('logger');
 
         if ($request->isMethod('POST')) {
             if ($form->isSubmitted()) {
@@ -119,6 +120,7 @@ class DefaultController extends Controller
                     )
                     ->attach(Swift_Attachment::fromPath($devisAutocar->getUploadRootDir() . '/' . $devisAutocar->getDocuments()))
                 ;
+                $logger->error('ici');
                 $message->addPart($message->getBody(), 'text/plain');
                 $mailer = $this->get('mailer');
                 $mailer->send($message);
