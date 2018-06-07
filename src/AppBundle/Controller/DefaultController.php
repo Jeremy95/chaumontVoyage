@@ -102,7 +102,6 @@ class DefaultController extends Controller
         $form = $this->createForm(DevisAutocarType::class, $devisAutocar);
 
         $form->handleRequest($request);
-        $logger = $this->get('logger');
 
         if ($request->isMethod('POST')) {
             if ($form->isSubmitted()) {
@@ -113,14 +112,13 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Demande de devis autocars')
                     ->setFrom('no-reply@chaumont-voyages.fr')
-                    ->setTo('jerem.b95@gmail.com')
+                    ->setTo('simsdev26@gmail.com')
                     ->setBody(
                         $this->render(':Email:devisAutocars.html.twig', array('devisAutocars' => $devisAutocar)),
                         'text/html'
                     )
                     ->attach(Swift_Attachment::fromPath($devisAutocar->getUploadRootDir() . '/' . $devisAutocar->getDocuments()))
                 ;
-                $logger->error('ici');
                 $message->addPart($message->getBody(), 'text/plain');
                 $mailer = $this->get('mailer');
                 $mailer->send($message);
