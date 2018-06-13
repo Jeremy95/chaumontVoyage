@@ -44,7 +44,7 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Prise de contact')
                     ->setFrom('no-reply@chaumont-voyages.fr')
-                    ->setTo('jerem.b95@gmail.com')
+                    ->setTo('veronique@chaumontvges.com')
                     ->setBody(
                         $this->render(':Email:contact.html.twig', array('contact' => $contact)),
                         'text/html'
@@ -112,7 +112,7 @@ class DefaultController extends Controller
                 $message = \Swift_Message::newInstance()
                     ->setSubject('Demande de devis autocars')
                     ->setFrom('no-reply@chaumont-voyages.fr')
-                    ->setTo('simsdev26@gmail.com')
+                    ->setTo('veronique@chaumontvges.com')
                     ->setBody(
                         $this->render(':Email:devisAutocars.html.twig', array('devisAutocars' => $devisAutocar)),
                         'text/html'
