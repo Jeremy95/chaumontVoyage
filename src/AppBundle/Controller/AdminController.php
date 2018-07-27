@@ -24,11 +24,10 @@ class AdminController extends Controller
         $em = $this->getDoctrine()->getManager();
 
         $accueilPage = $em->getRepository('AppBundle:Page')->findOneByName('accueil');
-        $contentPage = $accueilPage->getContent();
 
         $page = new Page();
 
-        $formAccueil = $this->createForm(AccueilType::class, $contentPage);
+        $formAccueil = $this->createForm(AccueilType::class, null !== $accueilPage ? $accueilPage->getContent() : null);
         $formAutocarsTti = $this->createForm(AutocarsTtiType::class);
         $formAccueil->handleRequest($request);
 
