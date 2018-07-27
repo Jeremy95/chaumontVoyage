@@ -20,7 +20,10 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        return [];
+        $em = $this->getDoctrine()->getManager();
+        $pageAccueil = $em->getRepository('AppBundle:Page')->findOneByName('accueil');
+
+        return ['pageAccueil' => $pageAccueil];
     }
 
     /**
