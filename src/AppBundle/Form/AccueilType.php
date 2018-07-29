@@ -31,6 +31,12 @@ class AccueilType extends AbstractType
                     'attr' => ['class' => 'form-control']
                 ]
             )
+            ->add('imageOne', FileType::class, [
+                    'label' => 'Choisissez une image',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
             ->add('contentOne', TextareaType::class, [
                     'label' => 'Contenu 1',
                     'required' => false,
@@ -39,6 +45,12 @@ class AccueilType extends AbstractType
             )
             ->add('titleTwo', TextType::class, [
                     'label' => 'Titre 2',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('imageTwo', FileType::class, [
+                    'label' => 'Choisissez une image',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]

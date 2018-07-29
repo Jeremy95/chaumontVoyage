@@ -30,19 +30,18 @@ class Page
     private $content;
 
     /**
+     * @var array
+     *
+     * @ORM\Column(name="image_content", type="array", nullable=true)
+     */
+    private $imageContent;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="name", type="string", length=255)
      */
     private $name;
-
-    /**
-     * @Assert\File(
-     *      maxSize="1000k",
-     *      mimeTypes = {"image/png", "image/jpeg", "image/gif"}
-     * )
-     */
-    public $img;
 
 
     /**
@@ -85,5 +84,21 @@ class Page
     public function setName($name)
     {
         $this->name = $name;
+    }
+
+    /**
+     * @return array
+     */
+    public function getImageContent()
+    {
+        return $this->imageContent;
+    }
+
+    /**
+     * @param array $imageContent
+     */
+    public function setImageContent($imageContent)
+    {
+        $this->imageContent = $imageContent;
     }
 }

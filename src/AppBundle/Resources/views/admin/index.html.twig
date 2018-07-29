@@ -55,7 +55,60 @@
                                 <h5><b>Accueil</b></h5>
                             </div>
                             <div class="panel-body">
-                                {{ form(formAccueil) }}
+                                {{ form_start(formAccueil, {'attr': {'class': 'p-4'}})}}
+                                        <div class="row">
+                                            {{ form_label(formAccueil.titleOne) }}{{ (formAccueil.titleOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.titleOne) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.imageOne) }}{{ (formAccueil.imageOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.imageOne) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.contentOne) }}{{ (formAccueil.contentOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.contentOne) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.titleTwo) }}{{ (formAccueil.titleTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.titleTwo) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.imageTwo) }}{{ (formAccueil.imageTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.imageTwo) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.contentTwo) }}{{ (formAccueil.contentTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.contentTwo) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.titleThree) }}{{ (formAccueil.titleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.titleThree) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.subtitleThree) }}{{ (formAccueil.subtitleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.subtitleThree) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.contentThree) }}{{ (formAccueil.contentThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                        {{ form_widget(formAccueil.contentThree) }}
+                                        </div>
+
+                                        <div class="row">
+                                            {{ form_label(formAccueil.submit) }}
+                                        {{ form_widget(formAccueil.submit) }}
+                                        </div>
+
+                                {{ form_widget(formAccueil) }}
+                                {{ form_rest(formAccueil) }}
+                                {{ form_end(formAccueil)}}
                             </div>
                             <div class="panel-footer text-right">
                             </div>

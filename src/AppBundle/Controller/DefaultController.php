@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Swift_Attachment;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\File;
 use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends Controller
@@ -22,6 +23,18 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pageAccueil = $em->getRepository('AppBundle:Page')->findOneByName('accueil');
+        $contentImages = $pageAccueil->getImageContent();
+        foreach ($contentImages as &$image) {
+            $splFile = new \SplFileInfo(realpath($image));
+            if ($splFile->isFile()) {
+                $file = new File(realpath($image));
+                $image = $file;
+                unset($file);
+            } else {
+                continue;
+            }
+        }
+        $pageAccueil->setImageContent($contentImages);
 
         return ['pageAccueil' => $pageAccueil];
     }
