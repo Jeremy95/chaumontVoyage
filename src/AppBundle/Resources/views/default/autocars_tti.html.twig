@@ -10,7 +10,13 @@
                     <!-- SLIDE  -->
                     <li data-transition="fade" data-slotamount="1" data-masterspeed="1500" data-thumb="{{ asset('images/slider/rev/ken-2-thumb.jpg') }}" data-delay="15000"  data-saveperformance="off"  data-title="Unlimited Possibilities">
                         <!-- MAIN IMAGE -->
-                        <img src="{{ asset('images/cars.jpg') }}"  alt="kenburns6" data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on" data-duration="25000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="140" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
+                        <img
+                                {% if pageAutocarsTti.imageContent.imageSlider.basename is defined %}
+                                    src="{{ asset('images/upload/autocars-tti/' ~ pageAutocarsTti.imageContent.imageSlider.basename) }}"
+                                {% else %}
+                                    src="{{ asset('images/cars.jpg') }}"
+                                {% endif %}
+                                alt="kenburns6" data-bgposition="center bottom" data-bgpositionend="center top" data-kenburns="on" data-duration="25000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="140" data-rotatestart="0" data-rotateend="0" data-blurstart="0" data-blurend="0" data-offsetstart="0 0" data-offsetend="0 0" class="rev-slidebg" data-no-retina>
                         <!-- LAYERS -->
 
                         <!-- LAYER NR. 2 -->
@@ -87,20 +93,26 @@
             <div class="container clearfix">
 
                 <div class="heading-block center">
-                    <h2>Nos services</h2>
+                    <h2>{{ pageAutocarsTti.content.title }}</h2>
                 </div>
 
                 <div class="col_one_third nobottommargin">
                     <div class="feature-box media-box">
                         <div class="fbox-media">
                             <a href="{{ path('flottepage') }}">
-                                <img src="{{ asset('images/flotte_auto.jpg') }}" alt="Why choose Us?">
+                                <img
+                                        {% if pageAutocarsTti.imageContent.imageOne.basename is not defined %}
+                                            src="{{ asset('images/upload/autocars-tti/' ~ pageAutocarsTti.imageContent.imageOne.basename) }}"
+                                        {% else %}
+                                            src="{{ asset('images/flotte_auto.jpg') }}"
+                                        {% endif %}
+                                        alt="Why choose Us?">
                             </a>
                         </div>
                         <div class="fbox-desc">
-                            <h3>Flotte d'autocars.<span class="subtitle"></span></h3>
-                            <p>Nous mettons à votre disposition des autocars de 22 à 83 places.
-                                Tous équipés de vidéo, air conditionné,  réfrigérateur, sièges inclinables, et toilettes (à partir de 33 places).
+                            <h3>{{ pageAutocarsTti.content.titleOne }}<span class="subtitle"></span></h3>
+                            <p>{{ pageAutocarsTti.content.contentOne }}
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -109,13 +121,18 @@
                     <div class="feature-box media-box">
                         <div class="fbox-media">
                             <a href="#couchetteetremorques">
-                                <img src="{{ asset('images/remorque-640x480.jpg') }}" alt="Why choose Us?">
+                                <img
+                                {% if pageAutocarsTti.imageContent.imageTwo.basename is not defined %}
+                                    src="{{ asset('images/upload/autocars-tti/' ~ pageAutocarsTti.imageContent.imageTwo.basename) }}"
+                                {% else %}
+                                    src="{{ asset('images/remorque-640x480.jpg') }}"
+                                {% endif %}
+                                 alt="Why choose Us?">
                             </a>
                         </div>
                         <div class="fbox-desc">
-                            <h3>Couchettes & remorques<span class="subtitle"></span></h3>
-                            <p>Des cars couchettes de 40 à 50 places pour que vos week-ends soient plus confortables.
-                                Pour transporter votre matériel ou bagages de tous types, des remorques de 9 à 24 m3.</p>
+                            <h3>{{ pageAutocarsTti.content.titleTwo }}<span class="subtitle"></span></h3>
+                            <p>{{ pageAutocarsTti.content.contentTwo }}</p>
                         </div>
                     </div>
                 </div>
@@ -124,12 +141,18 @@
                     <div class="feature-box media-box">
                         <div class="fbox-media">
                             <a href="#securite">
-                                <img src="{{ asset('images/ceinture-securite.jpg') }}" alt="Why choose Us?">
+                                <img
+                                        {% if pageAutocarsTti.imageContent.imageThree.basename is not defined %}
+                                            src="{{ asset('images/upload/autocars-tti/' ~ pageAutocarsTti.imageContent.imageThree.basename) }}"
+                                        {% else %}
+                                            src="{{ asset('images/ceinture-securite.jpg') }}"
+                                        {% endif %}
+                                        alt="Why choose Us?">
                             </a>
                         </div>
                         <div class="fbox-desc">
-                            <h3>Sécurité et sureté.<span class="subtitle"></span></h3>
-                            <p>Pour notre société il s'agit d'un enjeu majeur : le respect de la réglementation en vigueur est donc indispensable. La sécurité, un engagement que nous respectons.</p>
+                            <h3>{{ pageAutocarsTti.content.titleThree }}<span class="subtitle"></span></h3>
+                            <p>{{ pageAutocarsTti.content.contentThree }}</p>
                         </div>
                     </div>
                 </div>
@@ -142,7 +165,7 @@
                 <div class="container-fluid vertical-middle center clearfix">
                     <!--            <i class="i-plain i-large icon-line-video divcenter" data-animate="fadeInDown"></i>       -->
                     <div class="emphasis-title nomargin" data-animate="fadeInUp">
-                        <h2 style="font-size: 56px;">Faites de vos rêves une réalité</h2>
+                        <h2 style="font-size: 56px;">{{ pageAutocarsTti.content.contentVideo }}</h2>
                     </div>
                 </div>
                 <div class="video-wrap">
@@ -160,15 +183,12 @@
                 <div class="col_three_fifth">
 
                     <div class="heading-block center">
-                        <h3>Sécurité</h3>
+                        <h3>{{ pageAutocarsTti.content.titleFour }}</h3>
                         <span></span>
                     </div>
 
                     <p>
-                        La sécurité représente la préocupation majeure de notre activité au quotidien, outre que notre matériel soit de
-                        dernière génération, nous apportons une attention constante à son parfait entretien afin de conserver le niveau de disponibilité optimale,
-                        dans le but de vous satisfaire pleinement. Ainsi, pour notre société, la sécurité n' est pas seulement un mot, mais un réel enjeux que nous
-                        nous efforçons de maintenir au plus haut niveau
+                        {{ pageAutocarsTti.content.contentFour }}
                     </p>
 
                     <div class="col_four_fifth">
@@ -208,11 +228,10 @@
             <div class="container clearfix" id="couchetteetremorques">
 
                 <div class="heading-block center">
-                    <h2>Couchettes et remorques</h2>
+                    <h2>{{ pageAutocarsTti.content.titleFive }}</h2>
                 </div>
 
-                <p>Vous avez un long trajet à réaliser, nous avons une solution plus confortable à vous proposer si vous faites le trajet de nuit : Nos autocars couchettes sont à votre disposition pour vos week-ends de neige, de plongée, de voiles, de randonnée pédestre...
-                    Vous qui êtes sportifs amateurs ou professionnels et qui devez vous rendre dans une autre commune pour disputer un match ou un tournoi : Optez pour l'un de nos autocars couchettes pour être en forme à l'arrivée. </p>
+                <p>{{ pageAutocarsTti.content.contentFive }}</p>
 
                 <div class="col_one_third " style="margin-bottom:0px; margin-right:2%; height: 45%;">
                     <div class="nomargin" style="height: 50%;background: url({{ asset('images/cars/83pl.jpg') }}) no-repeat;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">

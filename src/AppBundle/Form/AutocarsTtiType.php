@@ -25,6 +25,18 @@ class AutocarsTtiType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('imageSlider', FileType::class, [
+                    'label' => 'Image slider',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('title', TextType::class, [
+                    'label' => 'Titre 1',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
             ->add('titleOne', TextType::class, [
                     'label' => 'Titre 1',
                     'required' => false,
@@ -37,6 +49,12 @@ class AutocarsTtiType extends AbstractType
                     'attr' => ['class' => 'form-control']
                 ]
             )
+            ->add('imageOne', FileType::class, [
+                    'label' => 'Image 1',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
             ->add('titleTwo', TextType::class, [
                     'label' => 'Titre 2',
                     'required' => false,
@@ -44,7 +62,73 @@ class AutocarsTtiType extends AbstractType
                 ]
             )
             ->add('contentTwo', TextType::class, [
-                    'label' => 'Content 2',
+                    'label' => 'Contenu 2',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('imageTwo', FileType::class, [
+                    'label' => 'Image 2',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('titleThree', TextType::class, [
+                    'label' => 'Titre 3',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('contentThree', TextType::class, [
+                    'label' => 'Contenu 3',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('imageThree', FileType::class, [
+                    'label' => 'Image 3',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('contentVideo', TextType::class, [
+                    'label' => 'Contenu texte vidéo',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('sliderVideo', TextType::class, [
+                    'label' => 'Url vidéo',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('titleFour', TextType::class, [
+                    'label' => 'Titre 4',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('contentFour', TextType::class, [
+                    'label' => 'Contenu 4',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('imageFour', FileType::class, [
+                    'label' => 'Image 4',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('titleFive', TextType::class, [
+                    'label' => 'Titre 5',
+                    'required' => false,
+                    'attr' => ['class' => 'form-control']
+                ]
+            )
+            ->add('contentFive', TextType::class, [
+                    'label' => 'Contenu 5',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]

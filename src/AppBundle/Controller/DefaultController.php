@@ -23,6 +23,7 @@ class DefaultController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $pageAccueil = $em->getRepository('AppBundle:Page')->findOneByName('accueil');
+
         $contentImages = $pageAccueil->getImageContent();
         foreach ($contentImages as &$image) {
             $splFile = new \SplFileInfo(realpath($image));
@@ -93,7 +94,24 @@ class DefaultController extends Controller
      */
     public function autocarsTtiAction(Request $request)
     {
-       return [];
+       $em = $this->getDoctrine()->getManager();
+       $pageAutocarsTti = $em->getRepository('AppBundle:Page')->findOneByName('autocars-tti');
+       $imagesAutocarsTti = $pageAutocarsTti->getImageContent();
+
+       foreach ($imagesAutocarsTti as &$image) {
+           $splFile = new \SplFileInfo(realpath($image));
+           if ($splFile->isFile()) {
+               $file = new File(realpath($image));
+               $image = $file;
+               unset($file);
+           } else {
+               continue;
+           }
+       }
+
+       $pageAutocarsTti->setImageContent($imagesAutocarsTti);
+
+       return ['pageAutocarsTti' => $pageAutocarsTti];
     }
 
     /**

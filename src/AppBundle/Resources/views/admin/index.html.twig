@@ -120,7 +120,98 @@
                                 <h5><b>Autocars TTI</b></h5>
                             </div>
                             <div class="panel-body">
+                                {{ form_start(formAutocarsTti, {'attr': {'class': 'p-4'}})}}
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.imageSlider) }}{{ (formAutocarsTti.imageSlider.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.imageSlider) }}
+                                </div>
 
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.title) }}{{ (formAutocarsTti.title.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.title) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.titleOne) }}{{ (formAutocarsTti.titleOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.titleOne) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentOne) }}{{ (formAutocarsTti.contentOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentOne) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.imageOne) }}{{ (formAutocarsTti.imageOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.imageOne) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.titleTwo) }}{{ (formAutocarsTti.titleTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.titleTwo) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentTwo) }}{{ (formAutocarsTti.contentTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentTwo) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.imageTwo) }}{{ (formAutocarsTti.imageTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.imageTwo) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.titleThree) }}{{ (formAutocarsTti.titleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.titleThree) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentThree) }}{{ (formAutocarsTti.contentThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentThree) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.imageThree) }}{{ (formAutocarsTti.imageThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.imageThree) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentVideo) }}{{ (formAutocarsTti.contentVideo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentVideo) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.sliderVideo) }}{{ (formAutocarsTti.sliderVideo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.sliderVideo) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.titleFour) }}{{ (formAutocarsTti.titleFour.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.titleFour) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.imageFour) }}{{ (formAutocarsTti.imageFour.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.imageFour) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentFour) }}{{ (formAutocarsTti.contentFour.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentFour) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.titleFive) }}{{ (formAutocarsTti.titleFive.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.titleFive) }}
+                                </div>
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.contentFive) }}{{ (formAutocarsTti.contentFive.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAutocarsTti.contentFive) }}
+                                </div>
+
+                                <div class="row">
+                                    {{ form_label(formAutocarsTti.submit) }}
+                                    {{ form_widget(formAutocarsTti.submit) }}
+                                </div>
+
+                                {{ form_widget(formAutocarsTti) }}
+                                {{ form_rest(formAutocarsTti) }}
+                                {{ form_end(formAutocarsTti)}}
                             </div>
                             <div class="panel-footer text-right">
                             </div>

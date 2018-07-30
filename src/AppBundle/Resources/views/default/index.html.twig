@@ -28,9 +28,9 @@
         <div class="col_half" style="margin-bottom: 0%; margin-right: 1px;height: 100%;">
             <div class="promo promo-dark promo-mini promo-center " style="height:100%;
                     {% if pageAccueil.imageContent.imageOne.basename is defined %}
-                    background: url({{ asset('images/upload/accueil/' ~ pageAccueil.imageContent.imageOne.basename) }})
+                        background: url({{ asset('images/upload/accueil/' ~ pageAccueil.imageContent.imageOne.basename) }})
                     {% else %}
-                    background: url('')
+                        background: url({{ asset('images/imageOne.jpg') }})
                     {% endif %}
                     no-repeat fixed ;background-position:right 500px bottom 60%; padding: 9% 0%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
                 <div class="heading-block topmargin-sm">
@@ -48,9 +48,9 @@
         <div class="col_half col_last" style="float: right;margin-bottom: 0px;height: 100%;">
             <div class="promo promo-dark promo-mini promo-center" style="height: 100%;
                     {% if pageAccueil.imageContent.imageTwo.basename is defined %}
-                    background: url({{ asset('images/upload/accueil/' ~ pageAccueil.imageContent.imageTwo.basename) }})
+                        background: url({{ asset('images/upload/accueil/' ~ pageAccueil.imageContent.imageTwo.basename) }})
                     {% else %}
-                    background: url('')
+                        background: url({{ asset('images/imageTwo.jpg') }})
                     {% endif %}
                     no-repeat fixed;background-position:right 45% bottom 60%; padding: 9% 0%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;">
                 <div class="heading-block topmargin-sm">
