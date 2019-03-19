@@ -11,17 +11,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  * @ORM\Table(name="devis_autocar")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\DevisAutocarRepository")
  */
-class DevisAutocar extends AbstractDevis
+class DevisAutocar extends Devis
 {
-    /**
-     * @var int
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
-     */
-    private $id;
-
     /**
      * @var string
      *
@@ -99,17 +90,6 @@ class DevisAutocar extends AbstractDevis
      * )
      */
     public $files;
-
-
-    /**
-     * Get id.
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
-    }
 
     /**
      * Set society.

@@ -26,7 +26,7 @@ class AccueilType extends AbstractType
     {
         $builder
             ->add('titleOne', TextType::class, [
-                    'label' => 'Titre 1',
+                    'label' => 'Titre',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
@@ -38,13 +38,13 @@ class AccueilType extends AbstractType
                 ]
             )
             ->add('contentOne', TextareaType::class, [
-                    'label' => 'Contenu 1',
+                    'label' => 'Contenu',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
             )
             ->add('titleTwo', TextType::class, [
-                    'label' => 'Titre 2',
+                    'label' => 'Titre',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
@@ -56,25 +56,25 @@ class AccueilType extends AbstractType
                 ]
             )
             ->add('contentTwo', TextareaType::class, [
-                    'label' => 'Content 2',
+                    'label' => 'Contenu',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
             )
             ->add('titleThree', TextType::class, [
-                    'label' => 'Titre 3',
+                    'label' => 'Titre',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
             )
             ->add('subtitleThree', TextType::class, [
-                    'label' => 'Sous-Titre 3',
+                    'label' => 'Sous-Titre',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]
             )
             ->add('contentThree', TextareaType::class, [
-                    'label' => 'Contenu 3',
+                    'label' => 'Contenu',
                     'required' => false,
                     'attr' => ['class' => 'form-control']
                 ]

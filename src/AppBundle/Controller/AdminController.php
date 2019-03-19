@@ -27,6 +27,7 @@ class AdminController extends Controller
 
         $accueilPage = $em->getRepository('AppBundle:Page')->findOneByName('accueil');
         $autocarsTtiPage = $em->getRepository('AppBundle:Page')->findOneByName('autocars-tti');
+
         if (null === $accueilPage) {
             $accueilPage = new Page();
         }

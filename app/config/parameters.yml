@@ -2,11 +2,12 @@
 parameters:
     database_host: 127.0.0.1
     database_port: null
-    database_name: symfony
+    database_name: chaumont-voyages
     database_user: root
-    database_password: null
+    database_password: root
     mailer_transport: smtp
-    mailer_host: 127.0.0.1
+    mailer_host: localhost
+    mailer_port: 1025
     mailer_user: null
     mailer_password: null
     secret: f4c60359ca74e238a28f87e949a8aa582768fce9

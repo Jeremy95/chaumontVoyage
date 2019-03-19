@@ -56,55 +56,63 @@
                             </div>
                             <div class="panel-body">
                                 {{ form_start(formAccueil, {'attr': {'class': 'p-4'}})}}
-                                        <div class="row">
-                                            {{ form_label(formAccueil.titleOne) }}{{ (formAccueil.titleOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                <div class="form-group">
+                                    <h3>1. Slider</h3>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.titleOne) }}{{ (formAccueil.titleOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.titleOne) }}
-                                        </div>
-
-                                        <div class="row">
-                                            {{ form_label(formAccueil.imageOne) }}{{ (formAccueil.imageOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    </div>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.imageOne) }}{{ (formAccueil.imageOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.imageOne) }}
-                                        </div>
+                                    </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.contentOne) }}{{ (formAccueil.contentOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    <div class="row">
+                                        {{ form_label(formAccueil.contentOne) }}{{ (formAccueil.contentOne.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.contentOne) }}
-                                        </div>
+                                    </div>
+                                </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.titleTwo) }}{{ (formAccueil.titleTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
-                                        {{ form_widget(formAccueil.titleTwo) }}
-                                        </div>
+                                <div class="form-group">
+                                <h3>2. Slider</h3>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.titleTwo) }}{{ (formAccueil.titleTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAccueil.titleTwo) }}
+                                    </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.imageTwo) }}{{ (formAccueil.imageTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
-                                        {{ form_widget(formAccueil.imageTwo) }}
-                                        </div>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.imageTwo) }}{{ (formAccueil.imageTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAccueil.imageTwo) }}
+                                    </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.contentTwo) }}{{ (formAccueil.contentTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
-                                        {{ form_widget(formAccueil.contentTwo) }}
-                                        </div>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.contentTwo) }}{{ (formAccueil.contentTwo.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    {{ form_widget(formAccueil.contentTwo) }}
+                                    </div>
+                                </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.titleThree) }}{{ (formAccueil.titleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                <div class="form-group">
+                                    <h3>3. Présentation</h3>
+                                    <div class="row">
+                                        {{ form_label(formAccueil.titleThree) }}{{ (formAccueil.titleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.titleThree) }}
-                                        </div>
+                                    </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.subtitleThree) }}{{ (formAccueil.subtitleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    <div class="row">
+                                        {{ form_label(formAccueil.subtitleThree) }}{{ (formAccueil.subtitleThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.subtitleThree) }}
-                                        </div>
+                                    </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.contentThree) }}{{ (formAccueil.contentThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
+                                    <div class="row">
+                                        {{ form_label(formAccueil.contentThree) }}{{ (formAccueil.contentThree.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                         {{ form_widget(formAccueil.contentThree) }}
-                                        </div>
+                                    </div>
+                                </div>
 
-                                        <div class="row">
-                                            {{ form_label(formAccueil.submit) }}
-                                        {{ form_widget(formAccueil.submit) }}
-                                        </div>
+                                <div class="row">
+                                    {{ form_label(formAccueil.submit) }}
+                                {{ form_widget(formAccueil.submit) }}
+                                </div>
 
                                 {{ form_widget(formAccueil) }}
                                 {{ form_rest(formAccueil) }}
@@ -121,6 +129,9 @@
                             </div>
                             <div class="panel-body">
                                 {{ form_start(formAutocarsTti, {'attr': {'class': 'p-4'}})}}
+                                <div class="form-group">
+
+                                </div>
                                 <div class="row">
                                     {{ form_label(formAutocarsTti.imageSlider) }}{{ (formAutocarsTti.imageSlider.vars.required == 'true'?'<span style="color:red">*</span>':'') }}
                                     {{ form_widget(formAutocarsTti.imageSlider) }}
@@ -310,5 +321,6 @@
 
 <script src="{{ asset('js/jquery.js') }}"></script>
 <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>

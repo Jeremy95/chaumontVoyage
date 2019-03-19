@@ -23,6 +23,13 @@ class Page
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="name", type="string", length=255)
+     */
+    private $name;
+
+    /**
      * @var array
      *
      * @ORM\Column(name="content", type="array", nullable=true)
@@ -35,13 +42,6 @@ class Page
      * @ORM\Column(name="image_content", type="array", nullable=true)
      */
     private $imageContent;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="name", type="string", length=255)
-     */
-    private $name;
 
 
     /**
